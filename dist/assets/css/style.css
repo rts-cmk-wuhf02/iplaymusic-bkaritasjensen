@@ -22,9 +22,19 @@ h1 {
   font-size: 2em;
   margin-left: 5vw; }
 
-footer {
+.footer__icons {
   position: fixed;
   bottom: 0;
   height: 65px;
-  display: flex;
-  justify-content: space-evenly; }
+  text-align: center;
+  inline-size: -webkit-fill-available;
+  letter-spacing: 1.1em; }
+  .footer__icons i {
+    display: inline-block;
+    padding-top: 3%;
+    background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    vertical-align: middle; }
+  .footer__icons .fa-record-vinyl {
+    font-size: 2.3em; }

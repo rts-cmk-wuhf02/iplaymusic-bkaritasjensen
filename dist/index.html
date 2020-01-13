@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,31 +14,34 @@
 
 
 </header>
-<main>
+<main class="main__featured">
 	<nav>
     <p>featured</p>
     <i class="fas fa-search"></i>
 </nav>
 	<h1>Featured</h1>
-	<div id="classList">
+	<div id="cardList">
 
 	</div>
 
 </main>
-<footer>
-	<i class="fas fa-wave-square"></i>
-	<i class="fas fa-microphone-alt"></i>
-	<i class="fas fa-record-vinyl"></i>
-	<i class="fas fa-adjust"></i>
-	<i class="fas fa-stream"></i>
-</footer>
-<script src="/dist/assets/js/index.js"></script>
-</body>
 
-</html>
-
-<template class="featured__template">
+<template id="featured__template">
 	<img class="featured__images" src="" alt="image featured">
 	<h3 class="featured__headerText"></h3>
 	<p class="featured__text"></p>
 </template>
+
+<footer>
+	<div class="footer__icons">
+		<i class="fas fa-wave-square"></i>
+		<i class="fas fa-microphone-alt"></i>
+		<i class="fas fa-record-vinyl"></i>
+		<i class="fas fa-adjust"></i>
+		<i class="fas fa-stream"></i>
+	</div>
+</footer>
+<script src="/assets/js/index.js"></script>
+</body>
+
+</html>
