@@ -21,3 +21,10 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-size: 2em;
   margin-left: 5vw; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  display: flex;
+  justify-content: space-evenly; }
