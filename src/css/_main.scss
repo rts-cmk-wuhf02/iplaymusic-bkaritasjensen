@@ -50,9 +50,6 @@ h1{
 	}
 }
 
-
-
-
 /*****************************ALL ALBUMS**************************************/
 
 .featuredAlbums__headerText{
@@ -98,7 +95,7 @@ h1{
 		 -ms-flex-align: center;
 		 -webkit-align-items: center;
 		 align-items: center;
-		 
+
 		 .featuredAlbums__images{
 			 border-radius: 7px;
 			 width: 120px;
@@ -114,6 +111,7 @@ h1{
 .featuredAlbums__albumsList{
 	margin: 5px 10px;
 	height: 70px;
+	color: $third-color;
 
 	.featuredAlbums__albumsListFlex{
 		display: flex;
@@ -143,3 +141,11 @@ h1{
 	}
 }
 
+/*****************************ALBUMS DETALJER**************************************/
+
+.albumsDetails__imageSection{
+	background-image: url("/images/man-smoke.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 400px;
+}

@@ -6,7 +6,7 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-between; }
 
 .nav {
   text-transform: uppercase;
@@ -14,7 +14,14 @@ nav {
   font-weight: 100; }
 
 .fa-search, .fa-chevron-left {
-  margin-top: 17px; }
+  margin-top: 17px;
+  color: #111625; }
+
+.fa-chevron-left {
+  margin-left: 5vw; }
+
+.fa-search {
+  margin-right: 5vw; }
 
 main {
   width: 100%; }
@@ -67,7 +74,7 @@ h1 {
     font-weight: bolder;
     letter-spacing: unset;
     text-transform: unset;
-    color: #341931; }
+    color: #dfa0d7; }
   .featuredAlbums__headerText a {
     text-decoration: none; }
     .featuredAlbums__headerText a .featuredAlbums__headLink {
@@ -106,7 +113,8 @@ h1 {
 
 .featuredAlbums__albumsList {
   margin: 5px 10px;
-  height: 70px; }
+  height: 70px;
+  color: #111625; }
   .featuredAlbums__albumsList .featuredAlbums__albumsListFlex {
     display: flex; }
   .featuredAlbums__albumsList .featuresAlbums__imageAlbumList {
@@ -125,6 +133,13 @@ h1 {
         margin: 0; }
       .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName .featuredAlbums__albumsListAlbumArtist {
         margin: 0; }
+
+/*****************************ALBUMS DETALJER**************************************/
+.albumsDetails__imageSection {
+  background-image: url("/images/man-smoke.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; }
 
 .footer__icons {
   background-color: white;
