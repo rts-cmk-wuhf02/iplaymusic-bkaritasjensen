@@ -4,13 +4,13 @@ nav{
 	justify-content: space-evenly;
 }
 
-p{
+.nav{
 	@import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: 100;
 }
 
-.fa-search{
+.fa-search, .fa-chevron-left{
 	margin-top: 17px;
 }
