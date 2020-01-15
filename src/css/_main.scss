@@ -72,41 +72,54 @@ h1{
 		}
 	}
 }
+html, body {
+	position: relative;
+	height: 100%;
+  }
+  body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color:#000;
+	margin: 0;
+	padding: 0;
+  }
 .swiper-container {
 	width: 100%;
 	height: 100%;
+	
 }
-.swiper-wrapper{
-	display: flex;
-	justify-content: flex-start;
-	margin-left: 3vw;
-
 	.swiper-slide {
-		 /* Center slide text vertically */
-		 display: -webkit-box;
-		 display: -ms-flexbox;
-		 display: -webkit-flex;
-		 display: flex;
-		 -webkit-box-pack: center;
-		 -ms-flex-pack: center;
-		 -webkit-justify-content: center;
-		 justify-content: center;
-		 -webkit-box-align: center;
-		 -ms-flex-align: center;
-		 -webkit-align-items: center;
-		 align-items: center;
-
-		 .featuredAlbums__images{
-			 border-radius: 7px;
-			 width: 120px;
-			 height: 120px;
-			 margin: 0 2vw;
-			 -moz-box-shadow: 0 0 5px 0 #000;
-			 -webkit-box-shadow: 0 0 5px 0 #000;
-			  box-shadow: 0 0 5px 0 #000;
-		 }
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		margin: 5px 15vw;
+		
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		
+		.featuredAlbums__images{
+			border-radius: 7px;
+			width: 120px;
+			height: 120px;
+			margin: 0 2vw;
+			-moz-box-shadow: 0 0 5px 0 #000;
+			-webkit-box-shadow: 0 0 5px 0 #000;
+			box-shadow: 0 0 5px 0 #000;
+		}
 	}
-}
+
 
 .featuredAlbums__albumsList{
 	margin: 5px 10px;
@@ -144,7 +157,7 @@ h1{
 /*****************************ALBUMS DETALJER**************************************/
 
 .albumsDetails__imageSection{
-	background-image: url("/images/man-smoke.jpg");
+	background-image: url("/assets/images/man-smoke.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 400px;

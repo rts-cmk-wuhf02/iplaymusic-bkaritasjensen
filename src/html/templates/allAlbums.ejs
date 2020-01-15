@@ -102,9 +102,16 @@
 
 
 </main>
-<script src="../package/js/swiper.min.js"></script>
+<script src="/assets/js/swiper.min.js"></script>
 <script>
-    var swiper = new Swiper('.swiper-container');
-</script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 <% include ../partials/footer %>
 <% include ../partials/after-footer %>
