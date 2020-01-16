@@ -283,7 +283,7 @@ html, body {
 
 
 
-/*****************************CATEGORIES**************************************/
+/*****************************PLAYLISTS**************************************/
 
   .playlists__headerSection{
 	background-image: url("/assets/images/sound-wave.png");
@@ -329,3 +329,13 @@ html, body {
   .playlists__playlist{
 	margin-top: 110px;
   }
+
+
+/*****************************PLAYER**************************************/
+
+.player__mainBackground{
+	background-image: url("/assets/images/neon-walls.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

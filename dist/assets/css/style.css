@@ -745,6 +745,10 @@ body {
 .playlists__playlist {
   margin-top: 110px; }
 
+/*****************************CATEGORIES**************************************/
+.player__headerImage {
+  border-radius: 50%; }
+
 .footer__icons {
   background-color: white;
   position: fixed;
