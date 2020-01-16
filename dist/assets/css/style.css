@@ -493,7 +493,7 @@ main {
   width: 100%; }
 
 /******************************FEATURED********************************/
-h1 {
+.featured__headText {
   background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -613,15 +613,61 @@ body {
         margin: 0; }
 
 /*****************************ALBUMS DETALJER**************************************/
-.albumsDetails__imageSection h1, p {
+.albumsDetails__imageSection {
   background-image: url("/assets/images/man-smoke.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 350px;
   background-size: cover;
   color: white; }
-  .albumsDetails__imageSection h1 .albumDetails__albumName h1, p .albumDetails__albumName h1 {
+  .albumsDetails__imageSection li .fas {
     color: white; }
+  .albumsDetails__imageSection .albumDetails__headerText {
+    margin: 0 0 0 10vw; }
+    .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHeadText {
+      font-size: 2.3em; }
+    .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerTextSongs {
+      margin-bottom: 120px; }
+    .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHeadHastags {
+      color: #341931; }
+    .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHastags {
+      background-color: #FF1168;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      margin-right: 5px;
+      height: 25px;
+      font-weight: bolder; }
+
+.albumDetails__mainSectionSongs {
+  margin-left: 3vw;
+  margin-top: 40px; }
+  .albumDetails__mainSectionSongs .albumDetails__mainSongsHeaderText {
+    font-size: 1em; }
+  .albumDetails__mainSectionSongs .albumDetails__mainSong {
+    display: flex;
+    width: 100%;
+    margin-top: 20px; }
+    .albumDetails__mainSectionSongs .albumDetails__mainSong .fa-play-circle {
+      font-size: 30px;
+      background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__albumsListAlbumName {
+        margin: 0 0 2px 3vw;
+        font-size: 0.9em; }
+      .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__albumsListAlbumArtist {
+        margin: 0 0 0 3vw;
+        font-size: 0.8em;
+        color: #341931; }
+      .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__mainSongTime {
+        color: #341931;
+        margin-right: 3vw;
+        font-size: 0.8em; }
 
 .footer__icons {
   background-color: white;

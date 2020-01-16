@@ -4,7 +4,7 @@ main{
 
 /******************************FEATURED********************************/
 
-h1{
+.featured__headText{
 	@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
 	background: $gradient-color;
 	-webkit-background-clip: text;
@@ -156,15 +156,78 @@ html, body {
 
 /*****************************ALBUMS DETALJER**************************************/
 
-.albumsDetails__imageSection h1, p{
+.albumsDetails__imageSection{
 	background-image: url("/assets/images/man-smoke.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 400px;
+	height: 350px;
 	background-size: cover;
 	color: white;
 
-	.albumDetails__albumName h1{
+	li .fas{
 		color: white;
+	}
+	.albumDetails__headerText{
+		margin: 0 0 0 10vw;
+		
+		.albumDetails__headerHeadText{
+			font-size: 2.3em;
+		}
+		.albumDetails__headerTextSongs{
+			margin-bottom: 120px;
+		}
+		.albumDetails__headerHeadHastags{
+			color: $secound-color;
+		}
+		.albumDetails__headerHastags{
+			background-color: $base-color;
+			border-radius: 25px;
+			border: none;
+			color: white;
+			margin-right: 5px;
+			height: 25px;
+			font-weight: bolder;
+		}
+	}
+}
+
+.albumDetails__mainSectionSongs{
+	margin-left: 3vw;
+	margin-top: 40px;
+
+	.albumDetails__mainSongsHeaderText{
+		font-size: 1em;
+	}
+	.albumDetails__mainSong{
+		display: flex;
+		width: 100%;
+		margin-top: 20px;
+	
+		.fa-play-circle{
+			font-size: 30px;
+			background: $gradient-color;
+			-webkit-background-clip: text;
+ 			-webkit-text-fill-color: transparent;
+		}
+		.albumDetails__mainSongText{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+	
+			.albumDetails__albumsListAlbumName{
+				margin: 0 0 2px 3vw;
+				font-size: 0.9em;
+			}
+			.albumDetails__albumsListAlbumArtist{
+				margin: 0 0 0 3vw;
+				font-size: 0.8em;
+				color: $secound-color;
+			}
+			.albumDetails__mainSongTime{
+				color: $secound-color;
+				margin-right: 3vw;
+				font-size: 0.8em;
+			}
+		}
 	}
 }
