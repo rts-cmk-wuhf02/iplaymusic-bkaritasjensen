@@ -603,7 +603,7 @@ body {
   .featuredAlbums__albumsList .featureAlbums__albumsListInfo {
     display: flex;
     align-items: center;
-    margin-left: 5vw; }
+    margin-left: 1vw; }
     .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName {
       margin-right: 18vw;
       text-align: center; }
