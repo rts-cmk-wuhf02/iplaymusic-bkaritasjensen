@@ -613,11 +613,15 @@ body {
         margin: 0; }
 
 /*****************************ALBUMS DETALJER**************************************/
-.albumsDetails__imageSection {
+.albumsDetails__imageSection h1, p {
   background-image: url("/assets/images/man-smoke.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px; }
+  height: 400px;
+  background-size: cover;
+  color: white; }
+  .albumsDetails__imageSection h1 .albumDetails__albumName h1, p .albumDetails__albumName h1 {
+    color: white; }
 
 .footer__icons {
   background-color: white;

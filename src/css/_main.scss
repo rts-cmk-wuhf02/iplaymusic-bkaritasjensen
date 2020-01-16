@@ -156,9 +156,15 @@ html, body {
 
 /*****************************ALBUMS DETALJER**************************************/
 
-.albumsDetails__imageSection{
+.albumsDetails__imageSection h1, p{
 	background-image: url("/assets/images/man-smoke.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 400px;
+	background-size: cover;
+	color: white;
+
+	.albumDetails__albumName h1{
+		color: white;
+	}
 }
