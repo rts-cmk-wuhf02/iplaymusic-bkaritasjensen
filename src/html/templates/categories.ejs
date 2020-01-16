@@ -1,117 +1,112 @@
+
 <% include ../partials/head %>
 <% include ../partials/header %>
-<main class="main__featured">
+<main class="main__categories">
 	<% include ../partials/top-nav %>
-	<h1>All Albums</h1>
-	<section>
-		<div class="featuredAlbums__headerText">
-			<p class="featuredAlbums__headtext">Featured Albums</p>
-			<a href="/"><p class="featuredAlbums__headLink">View All</p></a>
+	<h1 class="featured__headText">Categories</h1>
+	<div class="dropdown buttonbar">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/woman-light.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/man-smoke.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/neon-walls.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/woman-water.jpg" alt="image album">
-					</a>
-				</div>
-			</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-	</section>
-	<section>
-		<div class="featuredAlbums__headerText">
-			<p class="featuredAlbums__headtext">New Releases</p>
-			<a href="/"><p class="featuredAlbums__headLink">View All</p></a>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/sunglasses-tech.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/woman-light.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/man-smoke.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/woman-water.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/neon-walls.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
 		</div>
-	</section>
+	</div> 
+	<div class="dropdown">
+		<button class="dropbtn categories__button" onclick="myFunction()">
+			Alternative
+			<i class="fas fa-ellipsis-h"></i>
+		</button>
+		<div class="dropdown-content" id="myDropdown">
+		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
+		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
+		</div>
+	</div> 
+	
 
 
 </main>
-<script src="/assets/js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+<script src="/assets/js/dropDown.js"></script>
 <% include ../partials/footer %>
 <% include ../partials/after-footer %>

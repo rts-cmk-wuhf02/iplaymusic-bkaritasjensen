@@ -670,6 +670,45 @@ body {
         font-size: 0.8em; }
 
 /*****************************CATEGORIES**************************************/
+.main__categories .featured__headText {
+  margin-left: 8vw; }
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  height: 54px;
+  width: 85vw;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FF1168;
+  padding: 0 5vw;
+  font-size: bolder; }
+
+.dropdown {
+  margin: 15px 0; }
+
+.dropdown-content {
+  display: none; }
+  .dropdown-content .fa-chevron-right {
+    float: right; }
+
+.dropdown-content a {
+  color: #341931;
+  margin: 20px 10px 10px 40px;
+  text-decoration: none;
+  display: block;
+  width: 75vw;
+  font-weight: 200;
+  letter-spacing: 1px; }
+
+.show {
+  display: block; }
+
 .footer__icons {
   background-color: white;
   position: fixed;
