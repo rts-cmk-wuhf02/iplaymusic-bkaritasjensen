@@ -305,16 +305,27 @@ html, body {
 			margin: 0;
 			font-size: 1.5em;
 		}
+		h3:first-child{
+			margin: 10px 0 0 0;
+		}
 	}
 	.swiper-container {
 		width: 100%;
-		padding-top: 50px;
-		padding-bottom: 50px;
+		height: auto;
+	
 	}
-	.swiper-slide {
+	.swiper-slide{
 		background-position: center;
 		background-size: cover;
 		width: 155px;
 		height: 155px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 5px 0 #000;
+		-webkit-box-shadow: 0 0 5px 0 #000;
+		 box-shadow: 0 0 5px 0 #000;
+		 margin: 5px 10vw;
   	}
+  }
+  .playlists__playlist{
+	margin-top: 110px;
   }

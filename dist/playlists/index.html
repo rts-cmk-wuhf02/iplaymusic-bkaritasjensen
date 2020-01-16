@@ -25,10 +25,10 @@
 		<h1 class="playslists__headerText">Playslists</h1>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
-			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
-			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
-			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
+			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
 			  <!-- <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
 			  <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
 			  <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
@@ -44,7 +44,7 @@
 		</div>
 	</section>
 
-	<section class="albumDetails__mainSectionSongs">
+	<section class="albumDetails__mainSectionSongs playlists__playlist">
 		<div class="albumDetails__mainSong">
 			<i class="fas fa-play-circle"></i>
 			<div class="albumDetails__mainSongText">
@@ -100,6 +100,9 @@
         depth: 100,
         modifier: 1,
         slideShadows : true,
+	  },
+	  pagination: {
+        el: '.swiper-pagination',
       },
     });
   </script>
