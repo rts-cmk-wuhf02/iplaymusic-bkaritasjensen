@@ -709,6 +709,33 @@ body {
 .show {
   display: block; }
 
+/*****************************CATEGORIES**************************************/
+.playlists__headerSection {
+  background-image: url("/assets/images/sound-wave.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 272px;
+  background-size: cover;
+  color: white; }
+  .playlists__headerSection .playslists__headerText {
+    font-size: 2em;
+    margin-left: 10vw; }
+  .playlists__headerSection .playlists__headerTitle {
+    color: #111625; }
+    .playlists__headerSection .playlists__headerTitle h3 {
+      text-align: center;
+      margin: 0;
+      font-size: 1.5em; }
+  .playlists__headerSection .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  .playlists__headerSection .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 155px;
+    height: 155px; }
+
 .footer__icons {
   background-color: white;
   position: fixed;
@@ -728,3 +755,5 @@ body {
     vertical-align: middle; }
   .footer__icons .fa-record-vinyl {
     font-size: 2.3em; }
+  .footer__icons a i .fa-stream {
+    letter-spacing: unset; }

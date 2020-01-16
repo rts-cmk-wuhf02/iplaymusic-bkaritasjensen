@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,22 +15,36 @@
 
 
 </header>
-<main class="main__featured">
-	<section class="albumsDetails__imageSection">
+<main class="main__categories">
+	<section class="playlists__headerSection">
 		<nav>
     <a href="/"><i class="fas fa-chevron-left"></i></a>
     <p class="nav">featured</p>
     <i class="fas fa-search"></i>
 </nav>
-		<div class="albumDetails__headerText">
-			<h1 class="albumDetails__headerHeadText">Old Town Road</h1>
-			<h3 class="albumDetails__headerTextSongs">12 Songs</h3>
-			<p class="albumDetails__headerHeadHastags">Genres hastags</p>
-			<button class="albumDetails__headerHastags">#country</button><button class="albumDetails__headerHastags">#country road</button>
+		<h1 class="playslists__headerText">Playslists</h1>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
+			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
+			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
+			  <div class="swiper-slide" src="/assets/images/man-smoke.jpg"></div>
+			  <!-- <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
+			  <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg0)"></div> -->
+			</div>
+		</div>
+
+		<div class="playlists__headerTitle">
+			<h3>Top 50</h3>
+			<h3>Rock Ballads</h3>
 		</div>
 	</section>
+
 	<section class="albumDetails__mainSectionSongs">
-		<h3 class="albumDetails__mainSongsHeaderText">All Songs</h3>
 		<div class="albumDetails__mainSong">
 			<i class="fas fa-play-circle"></i>
 			<div class="albumDetails__mainSongText">
@@ -69,10 +84,25 @@
 				</div>
 				<p class="albumDetails__mainSongTime">3 : 58</p>
 			</div>
-		</div>
+		</div>		
 	</section>
 </main>
 
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+    });
+  </script>
 
 <footer>
 	<div class="footer__icons">
