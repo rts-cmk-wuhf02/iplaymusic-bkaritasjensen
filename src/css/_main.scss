@@ -355,7 +355,7 @@ html, body {
 			align-items: center;
 			border: 20px solid rgba(60, 107, 134, 0.8);
 			display: block;
-			margin: 60px auto 0 auto;
+			margin: 40px auto 0 auto;
 			position: relative;
 		}
 	}
@@ -365,11 +365,11 @@ html, body {
 
 		.player__songInfoArtistName{
 			font-size: 1.2em;
-			margin-top: 50px;
+			margin-top: 45px;
 		}
 		.player_songInfoArtist{
 			margin: 0;
-			margin-bottom: 35px;
+			margin-bottom: 30px;
 		}
 	}
 	.player__playerLine{
@@ -391,6 +391,34 @@ html, body {
 				border-radius: 50%;
 				top: -19.7px;
 			}
+		}
+	}
+	.player__SongTime{
+		display: flex;
+		justify-content: space-between;
+		width: 85vw;
+		margin: 0 auto;
+
+		.player__songTimeText{
+			font-size: 0.9em;
+			font-weight: 200;
+		}
+	}
+	.player__playerIcons{
+		width: 70vw;
+		display: block;
+		margin: 0 auto;
+		.fa-play{
+			font-size: 3em;
+			background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
+    		-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin: 0 2.5vw;
+		}
+		.fa-angle-double-left, .fa-angle-left, .fa-angle-double-right, .fa-angle-right{
+			font-size: 2em;
+			margin: 0 2.5vw;
+			padding-bottom: 50px;
 		}
 	}
 }
