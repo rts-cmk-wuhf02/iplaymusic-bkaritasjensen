@@ -346,7 +346,7 @@ html, body {
 	color: #fff;
 
 	.player__artistProfilePhotoBorder{
-		
+	
 		
 		.player__artistProfilePhoto{
 			width: 175px;
@@ -358,18 +358,20 @@ html, body {
 			margin: 60px auto 0 auto;
 			position: relative;
 		}
-		.player__artistProfilePhoto:after{
-			content: '';
-	  		position: absolute;
-	  		top: -25px;
-	  		left: -25px;
-	  		right: -25px;
-	  		bottom: -2x5px;
-	  		background: red;
-			z-index: -1;
-		}
 	}
 
+	.player__songInfo{
+		text-align: center;
+
+		.player__songInfoArtistName{
+			font-size: 1.2em;
+			margin-top: 50px;
+		}
+		.player_songInfoArtist{
+			margin: 0;
+			margin-bottom: 35px;
+		}
+	}
 	.player__playerLine{
 		position: relative;
 		border: 1px solid white;
