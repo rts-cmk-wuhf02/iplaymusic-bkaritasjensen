@@ -344,4 +344,20 @@ html, body {
 	background-size: cover;
 	height: 100%;
 	color: #fff;
+
+	.player__artistProfilePhotoBorder{
+		border: 25px solid rgba(255, 0, 0, .3);
+		display: block;
+		margin: 0 auto;
+		border-radius: 50%;
+		
+		.player__artistProfilePhoto{
+			width: 175px;
+			height: 175px;
+			border-radius: 50%;
+			align-items: center;
+			border: 25px solid rgba(255, 0, 0, .5);
+			
+		}
+	}
 }
