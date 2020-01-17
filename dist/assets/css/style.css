@@ -756,17 +756,40 @@ body {
   background-size: cover;
   height: 100%;
   color: #fff; }
-  .player__mainBackground .player__artistProfilePhotoBorder {
-    border: 25px solid rgba(255, 0, 0, 0.3);
+  .player__mainBackground .player__artistProfilePhotoBorder .player__artistProfilePhoto {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    align-items: center;
+    border: 20px solid rgba(60, 107, 134, 0.8);
     display: block;
-    margin: 0 auto;
-    border-radius: 50%; }
-    .player__mainBackground .player__artistProfilePhotoBorder .player__artistProfilePhoto {
-      width: 175px;
-      height: 175px;
+    margin: 60px auto 0 auto;
+    position: relative; }
+  .player__mainBackground .player__artistProfilePhotoBorder .player__artistProfilePhoto:after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -2x5px;
+    background: red;
+    z-index: -1; }
+  .player__mainBackground .player__playerLine {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 2px;
+    width: 85vw;
+    margin: 0 auto; }
+    .player__mainBackground .player__playerLine .player__playerCircleBorder {
+      position: absolute;
+      border: 5px solid rgba(255, 15, 104, 0.3);
       border-radius: 50%;
-      align-items: center;
-      border: 25px solid rgba(255, 0, 0, 0.5); }
+      top: -11px; }
+      .player__mainBackground .player__playerLine .player__playerCircleBorder .player__playerCircle {
+        margin: 0;
+        border: 5px solid #ff0f68;
+        border-radius: 50%;
+        top: -19.7px; }
 
 .footer__icons {
   background-color: white;
