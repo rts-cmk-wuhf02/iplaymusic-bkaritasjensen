@@ -24,7 +24,6 @@ fetch("https://api.spotify.com/v1/browse/categories", {
 })
 	.then((respons) => respons.json())
 	.then((resultat) => {
-
 		/* console.log(resultat) */
 		/* console.log(resultat.categories.items) */
 		resultat.categories.items.forEach(element => {

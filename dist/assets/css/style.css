@@ -515,7 +515,10 @@ main {
     letter-spacing: normal;
     text-transform: unset; }
 
-.featured__imageShadow .featured__images {
+.featured__imageShadow {
+  margin-bottom: 100px; }
+
+.featured__images {
   position: relative;
   display: block;
   margin-left: auto;
