@@ -14,22 +14,26 @@ document.addEventListener("DOMContentLoaded", () =>{
 			getToken();
 		}else{
 			//console.log(result)
-			//console.log(result.playlists.items) 
+			//console.log(result.playlists) 
 			result.playlists.items.forEach(element => {
 				//console.log(element) 
-				console.log(element.name)
+				console.log(element)
 				
 				// Template
-				const container = document.querySelector(".swiper-wrapper");
-				const template = document.getElementById("playlists-images");
+				const containerImage = document.querySelector(".swiper-wrapper");
+				const templateImage = document.getElementById("playlists-images");
+				const containerText = document.querySelector(".playlists__headerTitle");
+				const templateText = document.getElementById("playlists-playlistsTitle");
 
-				const clone = template.content.cloneNode(true);
+				const cloneImage = templateImage.content.cloneNode(true);
+				const cloneText = templateText.content.cloneNode(true);
 
-				clone.querySelector(".swiper-slide").style = "background-image:url("+element.images[0].url+")";
-				clone.querySelector(".playlists__playlistsText").innerHTML = element.name;
+				cloneImage.querySelector(".swiper-slide").style = "background-image:url("+element.images[0].url+")";
+				cloneText.querySelector(".playlists__playlistsText").innerHTML = element.name;
 				
 				// Tilføjer clone
-				container.appendChild(clone);
+				containerImage.appendChild(cloneImage);
+				containerText.appendChild(cloneText);
 			}); 
 		}
 	})

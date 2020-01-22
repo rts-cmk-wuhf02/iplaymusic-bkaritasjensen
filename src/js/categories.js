@@ -1,6 +1,4 @@
 
-
-
 ////////////////////////HENTER NY TOKEN//////////////////////////
 document.addEventListener("DOMContentLoaded", () =>{
 

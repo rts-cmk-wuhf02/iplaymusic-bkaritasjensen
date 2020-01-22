@@ -14,18 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
       getToken();
     } else {
       //console.log(result)
-      //console.log(result.playlists.items) 
+      //console.log(result.playlists) 
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
-        console.log(element.name); // Template
+        console.log(element); // Template
 
-        var container = document.querySelector(".swiper-wrapper");
-        var template = document.getElementById("playlists-images");
-        var clone = template.content.cloneNode(true);
-        clone.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")";
-        clone.querySelector(".playlists__playlistsText").innerHTML = element.name; // Tilføjer clone
+        var containerImage = document.querySelector(".swiper-wrapper");
+        var templateImage = document.getElementById("playlists-images");
+        var containerText = document.querySelector(".playlists__headerTitle");
+        var templateText = document.getElementById("playlists-playlistsTitle");
+        var cloneImage = templateImage.content.cloneNode(true);
+        var cloneText = templateText.content.cloneNode(true);
+        cloneImage.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")";
+        cloneText.querySelector(".playlists__playlistsText").innerHTML = element.name; // Tilføjer clone
 
-        container.appendChild(clone);
+        containerImage.appendChild(cloneImage);
+        containerText.appendChild(cloneText);
       });
     }
   });
