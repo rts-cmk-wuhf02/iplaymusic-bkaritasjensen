@@ -723,12 +723,10 @@ body {
     margin-left: 10vw; }
   .playlists__headerSection .playlists__headerTitle {
     color: #111625; }
-    .playlists__headerSection .playlists__headerTitle h3 {
+    .playlists__headerSection .playlists__headerTitle .playlists__playlistsText {
       text-align: center;
       margin: 0;
       font-size: 1.5em; }
-    .playlists__headerSection .playlists__headerTitle h3:first-child {
-      margin: 10px 0 0 0; }
   .playlists__headerSection .swiper-container {
     width: 100%;
     height: auto; }

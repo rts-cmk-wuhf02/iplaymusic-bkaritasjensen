@@ -17,14 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       //console.log(result.playlists.items) 
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
-        console.log("HENTER BILLEDER", element.images[0].url); //Template
+        console.log(element.name); // Template
 
-        var container = document.getElementById("featured-cardList");
-        var template = document.getElementById("featured-template");
+        var container = document.querySelector(".swiper-wrapper");
+        var template = document.getElementById("playlists-images");
         var clone = template.content.cloneNode(true);
-        clone.querySelector(".featured__images").src = element.images[0].url;
-        /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
-        // Tilføjer clone
+        clone.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")";
+        clone.querySelector(".playlists__playlistsText").innerHTML = element.name; // Tilføjer clone
 
         container.appendChild(clone);
       });

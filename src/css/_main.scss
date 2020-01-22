@@ -299,13 +299,10 @@ html, body {
 	.playlists__headerTitle{
 		color: $third-color;
 
-		h3{
+		.playlists__playlistsText{
 			text-align: center;
 			margin: 0;
 			font-size: 1.5em;
-		}
-		h3:first-child{
-			margin: 10px 0 0 0;
 		}
 	}
 	.swiper-container {

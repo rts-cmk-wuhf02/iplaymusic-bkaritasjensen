@@ -25,77 +25,47 @@
 		<h1 class="playslists__headerText">Playslists</h1>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(/assets/images/man-smoke.jpg)"></div>
-			  <!-- <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
-			  <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg0)"></div> -->
+			  <!------------------ INDSÆT TEMPLATE IMAGES ------------------>
 			</div>
 		</div>
-
 		<div class="playlists__headerTitle">
-			<h3>Top 50</h3>
-			<h3>Rock Ballads</h3>
+			<!-------------------- INDSÆT TEMPLATE TITEL ------------------->
 		</div>
 	</section>
-
 	<section class="albumDetails__mainSectionSongs playlists__playlist">
-		<a href="/player">
-			<div class="albumDetails__mainSong">
-				<i class="fas fa-play-circle"></i>
-				<div class="albumDetails__mainSongText">
-					<div>
-						<h3 class="albumDetails__albumsListAlbumName">Old Town Road</h3>
-						<p class="albumDetails__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p class="albumDetails__mainSongTime">3 : 58</p>
-				</div>
-			</div>
-			</a>
-			<a href="/player">
-			<div class="albumDetails__mainSong">
-				<i class="fas fa-play-circle"></i>
-				<div class="albumDetails__mainSongText">
-					<div>
-						<h3 class="albumDetails__albumsListAlbumName">Old Town Road</h3>
-						<p class="albumDetails__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p class="albumDetails__mainSongTime">3 : 58</p>
-				</div>
-			</div>
-			</a>
-			<a href="/player">
-			<div class="albumDetails__mainSong">
-				<i class="fas fa-play-circle"></i>
-				<div class="albumDetails__mainSongText">
-					<div>
-						<h3 class="albumDetails__albumsListAlbumName">Old Town Road</h3>
-						<p class="albumDetails__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p class="albumDetails__mainSongTime">3 : 58</p>
-				</div>
-			</div>
-			</a>
-			<a href="/player">
-			<div class="albumDetails__mainSong">
-				<i class="fas fa-play-circle"></i>
-				<div class="albumDetails__mainSongText">
-					<div>
-						<h3 class="albumDetails__albumsListAlbumName">Old Town Road</h3>
-						<p class="albumDetails__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p class="albumDetails__mainSongTime">3 : 58</p>
-				</div>
-			</div>
-			</a>	
+		<!------------------ INDSÆT TEMPLATE PLAYLISTS --------------------->
 	</section>
 </main>
 
+
+<!----------------------------------------- OPRET TEMPLATE ---------------------------------->
+<!-- Template af billeder -->
+<template id="playlists-images">
+	<div class="swiper-slide" style=""></div>
+</template>
+<!-- Template af playliste titler -->
+<template id="playlists-playlistsTitle">
+	<h3 class="playlists__playlistsText"></h3>
+</template>
+<!-- Template af playliste -->
+<template id="playlists-playlists">
+	<a href="/player">
+		<div class="albumDetails__mainSong">
+			<i class="fas fa-play-circle"></i>
+			<div class="albumDetails__mainSongText">
+				<div>
+					<h3 class="albumDetails__albumsListAlbumName">Old Town Road</h3>
+					<p class="albumDetails__albumsListAlbumArtist">Billy Ray Cyrus</p>
+				</div>
+				<p class="albumDetails__mainSongTime">3 : 58</p>
+			</div>
+		</div>
+	</a>
+</template>
+
+
+<!--------------------------------------- JS FILER ------------------------------------------>
+<script src="/assets/js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
@@ -113,9 +83,8 @@
         el: '.swiper-pagination',
       },
     });
-  </script>
-
-
+</script>
+<script src="/assets/js/playlists.js"></script>
 <footer>
 	<div class="footer__icons">
 		<a href="/allAlbums"><i class="fas fa-wave-square"></i></a>
@@ -128,6 +97,5 @@
 
 <script src="/assets/js/historyBack.js"></script>
 <script src="/assets/js/getToken.js"></script>
-<script src="/assets/js/swiper.min.js"></script>
 </body>
 </html>
