@@ -22,109 +22,23 @@
     <i class="fas fa-search"></i>
 </nav>
 	<h1 class="featured__headText">Categories</h1>
-	<div class="dropdown buttonbar">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div>
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
-	<div class="dropdown">
-		<button class="dropbtn categories__button" onclick="myFunction()">
-			Alternative
-			<i class="fas fa-ellipsis-h"></i>
-		</button>
-		<div class="dropdown-content" id="myDropdown">
-		  <a href="#">Acoustic Blues<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Blues Rock<i class="fas fa-chevron-right"></i></a>
-		  <a href="#">Canadian Blues<i class="fas fa-chevron-right"></i></a>
-		</div>
-	</div> 
+	<ul id="dropdown">
+		<!----------------------INDSÆT TEMPLATE----------------------->
+	</ul> 
 </main>
 
-<script src="/assets/js/dropDown.js"></script>
+<!--------------------------LAVER TEMPLATE---------------------------->
+<template id="categories-template">
+	<div class="dropdown">
+		<button class="dropbtn categories__button">
+			<p class="categories__title"></p>
+		</button>
+	</div> 
+</template>
 
+
+<script src="/assets/js/dropDown.js"></script>
+<script src="/assets/js/categories.js"></script>
 <footer>
 	<div class="footer__icons">
 		<a href="/allAlbums"><i class="fas fa-wave-square"></i></a>
@@ -136,7 +50,7 @@
 </footer>
 
 <script src="/assets/js/historyBack.js"></script>
-<script src="/assets/js/data.js"></script>
+<script src="/assets/js/getToken.js"></script>
 <script src="/assets/js/swiper.min.js"></script>
 </body>
 </html>

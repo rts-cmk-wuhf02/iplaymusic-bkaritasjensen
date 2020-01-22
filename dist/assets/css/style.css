@@ -493,45 +493,42 @@ main {
   width: 100%; }
 
 /******************************FEATURED********************************/
-.featured__headText {
-  background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2em;
-  margin-left: 5vw; }
-
-.featured__textInfo {
-  color: white;
-  position: absolute;
-  z-index: 10;
-  width: 85vw;
-  left: 15vw;
-  bottom: 150px; }
-  .featured__textInfo .featured__headerText {
-    font-size: 1.8em;
-    margin: 0; }
-  .featured__textInfo .featured__text {
-    font-size: 0.7em;
-    letter-spacing: normal;
-    text-transform: unset; }
-
-.featured__imageShadow {
-  margin-bottom: 100px; }
-
-.featured__images {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85vw;
-  border-radius: 6px;
-  margin-bottom: 40px;
-  -moz-box-shadow: inset  0 -10px 50px -10px #000;
-  -webkit-box-shadow: inset  0 -10px 30px -10px #000;
-  box-shadow: inset  -10px -10px 50px 0px #000;
-  -moz-box-shadow: 0 0 5px 0 #000;
-  -webkit-box-shadow: 0 0 5px 0 #000;
-  box-shadow: 0 0 5px 0 #000; }
+.main__featured {
+  margin-bottom: 80px; }
+  .main__featured .featured__headText {
+    background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    margin-left: 5vw; }
+  .main__featured .featured__textInfo {
+    color: white;
+    position: absolute;
+    z-index: 10;
+    width: 85vw;
+    left: 15vw;
+    bottom: 150px; }
+    .main__featured .featured__textInfo .featured__headerText {
+      font-size: 1.8em;
+      margin: 0; }
+    .main__featured .featured__textInfo .featured__text {
+      font-size: 0.7em;
+      letter-spacing: normal;
+      text-transform: unset; }
+  .main__featured .featured__images {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    -moz-box-shadow: inset  0 -10px 50px -10px #000;
+    -webkit-box-shadow: inset  0 -10px 30px -10px #000;
+    box-shadow: inset  -10px -10px 50px 0px #000;
+    -moz-box-shadow: 0 0 5px 0 #000;
+    -webkit-box-shadow: 0 0 5px 0 #000;
+    box-shadow: 0 0 5px 0 #000; }
 
 /*****************************ALL ALBUMS**************************************/
 .featuredAlbums__headerText {
@@ -676,10 +673,12 @@ body {
         font-size: 0.8em; }
 
 /*****************************CATEGORIES**************************************/
-.main__categories .featured__headText {
-  margin-left: 8vw; }
+.main__categories {
+  margin-bottom: 80px; }
+  .main__categories .featured__headText {
+    margin-left: 8vw; }
 
-.dropdown .dropbtn {
+#dropdown .dropbtn {
   cursor: pointer;
   font-size: 16px;
   border: none;
@@ -688,20 +687,16 @@ body {
   height: 54px;
   width: 85vw;
   border-radius: 10px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: #FF1168;
   padding: 0 5vw;
   font-size: bolder; }
 
-.dropdown {
-  margin: 15px 0; }
-
-.dropdown-content {
-  display: none; }
-  .dropdown-content .fa-chevron-right {
-    float: right; }
+#dropdown {
+  padding: 0; }
+  #dropdown .categories__button {
+    margin: 15px auto; }
 
 .dropdown-content a {
   color: #341931;

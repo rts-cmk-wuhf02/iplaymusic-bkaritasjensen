@@ -3,41 +3,40 @@ main{
 }
 
 /******************************FEATURED********************************/
+.main__featured{
+	margin-bottom: 80px;
 
-.featured__headText{
-	@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
-	background: $gradient-color;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 2em;
-	margin-left: 5vw;
-}
-.featured__textInfo{
-	color: white;
-	position: absolute;
-	z-index: 10;
-	width: 85vw;
-	left: 15vw;
-	bottom: 150px;
-
-	.featured__headerText{
-		font-size: 1.8em;
-		margin: 0;
+	.featured__headText{
+		@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+		background: $gradient-color;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 2em;
+		margin-left: 5vw;
 	}
-	.featured__text{
-		font-size: 0.7em;
-		letter-spacing: normal;
-		text-transform: unset;
+	.featured__textInfo{
+		color: white;
+		position: absolute;
+		z-index: 10;
+		width: 85vw;
+		left: 15vw;
+		bottom: 150px;
+	
+		.featured__headerText{
+			font-size: 1.8em;
+			margin: 0;
+		}
+		.featured__text{
+			font-size: 0.7em;
+			letter-spacing: normal;
+			text-transform: unset;
+		}
 	}
-}
-.featured__imageShadow{
-	margin-bottom: 100px;
-}
-
+	
 	.featured__images{
 		position: relative;
 		display: block;
-  		margin-left: auto;
+		margin-left: auto;
 		margin-right: auto;
 		width: 85vw;
 		border-radius: 6px;
@@ -47,8 +46,9 @@ main{
 		box-shadow: inset  -10px -10px 50px 0px #000;
 		-moz-box-shadow: 0 0 5px 0 #000;
 		-webkit-box-shadow: 0 0 5px 0 #000;
-	 	box-shadow: 0 0 5px 0 #000;
+		box-shadow: 0 0 5px 0 #000;
 	}
+}
 
 
 /*****************************ALL ALBUMS**************************************/
@@ -241,11 +241,12 @@ html, body {
 /*****************************CATEGORIES**************************************/
 
 .main__categories{
+	margin-bottom: 80px;
 	.featured__headText{
 		margin-left: 8vw;
 	}
 }
-  .dropdown .dropbtn {
+  #dropdown .dropbtn {
 	cursor: pointer;
 	font-size: 16px;  
 	border: none;
@@ -254,25 +255,18 @@ html, body {
 	height: 54px;
 	width: 85vw;
 	border-radius: 10px;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	background-color: $base-color;
 	padding: 0 5vw;
 	font-size: bolder;
   }
-  .dropdown{
-	  margin: 15px 0;
+  #dropdown{
+	  padding: 0;
+	  .categories__button{
+		  margin: 15px auto;
+	  }
   }
-  
-  .dropdown-content {
-	display: none;
-	
-	.fa-chevron-right{
-		float: right;
-	}
-  }
-  
   .dropdown-content a {
 	color: $secound-color;
 	margin: 20px 10px 10px 40px;

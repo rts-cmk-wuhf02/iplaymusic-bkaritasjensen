@@ -22,28 +22,23 @@
     <i class="fas fa-search"></i>
 </nav>
 	<h1 class="featured__headText">Featured</h1>
-	<div id="cardList">
-		<div id="featured__template">
-			<div class="featured__textInfo">
-				<h3 class="featured__headerText">The Greatest Showman</h3>
-				<p class="featured__text">Soundtrack</p>
-			</div>
-			<div class="featured__imageShadow1">
-				<img class="featured__images" src="/assets/images/woman-light.jpg" alt="image featured">
-			</div>
-		</div>
-		<div id="featured__template">
-			<div class="featured__textInfo">
-				<h3 class="featured__headerText">The Greatest Showman</h3>
-				<p class="featured__text">Soundtrack</p>
-			</div>
-			<div class="featured__imageShadow">
-				<img class="featured__images" src="/assets/images/woman-light.jpg" alt="image featured">
-			</div>
-		</div>
+	<div id="featured-cardList">
+		<!---------------------------INDSÆT TEMPLATE------------------->
 	</div>
 </main>
 
+<!-------------------------------------LAVER TEMPLATE-------------------->
+<template id="featured-template">
+		<!-- <div class="featured__textInfo">
+			<h3 class="featured__headerText">The Greatest Showman</h3>
+			<p class="featured__text">Soundtrack</p> 
+		</div> -->
+		<div class="featured__imageShadow1">
+			<img class="featured__images" src="" alt="image featured">
+		</div>
+</template>
+
+<script src="/assets/js/featurend.js"></script>
 <footer>
 	<div class="footer__icons">
 		<a href="/allAlbums"><i class="fas fa-wave-square"></i></a>
@@ -55,7 +50,7 @@
 </footer>
 
 <script src="/assets/js/historyBack.js"></script>
-<script src="/assets/js/data.js"></script>
+<script src="/assets/js/getToken.js"></script>
 <script src="/assets/js/swiper.min.js"></script>
 </body>
 </html>
