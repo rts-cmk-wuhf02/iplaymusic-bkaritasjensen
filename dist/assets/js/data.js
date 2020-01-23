@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       //console.log(result.categories.items) 
       result.categories.items.forEach(function (element) {
         //console.log(element)
-        console.log(element.name); //Template
-
+        //console.log(element.name)
+        //Template
         var container = document.getElementById("dropdown");
         var template = document.getElementById("categories-template");
         var clone = template.content.cloneNode(true);
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
       //console.log(result.playlists.items) 
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
-        console.log("HENTER BILLEDER", element.images[0].url); //Template
-
+        //console.log("HENTER BILLEDER", element.images[0].url)
+        //Template
         var container = document.getElementById("featured-cardList");
         var template = document.getElementById("featured-template");
         var clone = template.content.cloneNode(true);
@@ -72,12 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (result.error) {
       getToken();
     } else {
-      //console.log(result)
-      //console.log(result.playlists) 
+      console.log(result); //console.log(result.playlists) 
+
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
-        console.log(element); // Template
-
+        //console.log(element)
+        // Template
         var containerImage = document.querySelector(".swiper-wrapper");
         var templateImage = document.getElementById("playlists-images");
         var containerText = document.querySelector(".playlists__headerTitle");
@@ -90,6 +90,21 @@ document.addEventListener("DOMContentLoaded", function () {
         containerImage.appendChild(cloneImage);
         containerText.appendChild(cloneText);
       });
+    }
+  });
+  var playlistsTracksURL = "https://api.spotify.com/v1/playlists/21THa8j9TaSGuXYNBU5tsC/tracks";
+  fetch(playlistsTracksURL, {
+    method: "GET",
+    headers: {
+      "Authorization": 'Bearer ' + sessionStorage.token
+    }
+  }).then(function (response) {
+    return response.json();
+  }).then(function (result) {
+    if (result.error) {
+      getToken();
+    } else {
+      console.log("Henter Tracks", result);
     }
   });
 });

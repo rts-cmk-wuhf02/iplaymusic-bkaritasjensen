@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 			//console.log(result.categories.items) 
 			result.categories.items.forEach(element => {
 				//console.log(element)
-				console.log(element.name)
+				//console.log(element.name)
 				//Template
 				const container = document.getElementById("dropdown");
 				const template = document.getElementById("categories-template");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 			//console.log(result.playlists.items) 
 			result.playlists.items.forEach(element => {
 				//console.log(element) 
-				console.log("HENTER BILLEDER", element.images[0].url)
+				//console.log("HENTER BILLEDER", element.images[0].url)
 				
 				//Template
 				const container = document.getElementById("featured-cardList");
@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () =>{
 		if (result.error){
 			getToken();
 		}else{
-			//console.log(result)
+			console.log(result)
 			//console.log(result.playlists) 
 			result.playlists.items.forEach(element => {
 				//console.log(element) 
-				console.log(element)
+				//console.log(element)
 				
 				// Template
 				const containerImage = document.querySelector(".swiper-wrapper");
@@ -106,15 +106,28 @@ document.addEventListener("DOMContentLoaded", () =>{
 				// Tilføjer clone
 				containerImage.appendChild(cloneImage);
 				containerText.appendChild(cloneText);
-			}); 
+			})
 		}
 	});
 
+	let playlistsTracksURL = "https://api.spotify.com/v1/playlists/21THa8j9TaSGuXYNBU5tsC/tracks";
+
+	fetch(playlistsTracksURL, {
+		method: "GET",
+		headers: {
+			"Authorization": 'Bearer ' + sessionStorage.token
+		}
+	})
+	.then((response) => response.json())
+	.then((result) => {
+		if (result.error){
+			getToken();
+		}else{
+			console.log("Henter Tracks", result)
+		}
 
 
-
-
-
+	})
 
 
 });
