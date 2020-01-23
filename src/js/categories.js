@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () =>{
 	})
 	.then((response) => response.json())
 	.then((result) => {
-		if (result.error === 401){
+		if (result.error){
 			getToken();
+			console.log(result.error)
 		}else{
-			/* console.log(result)
-			console.log(result.categories.items) */
+			 console.log(result)
+			/* console.log(result.categories.items) 
 			result.categories.items.forEach(element => {
 				//console.log(element)
 				console.log(element.name)
@@ -24,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 				const clone = template.content.cloneNode(true);
 				clone.querySelector(".categories__title").innerText = element.name;
 				/*clone.querySelector("").innerText = element.price;
-				clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+				clone.querySelector("").href = `/product/?sku=${element.sku}`;  
 				// Tilføjer clone
 				container.appendChild(clone);
-			});
+			}); */
 		
 		
 		}
