@@ -492,6 +492,16 @@ nav {
 main {
   width: 100%; }
 
+.overflow {
+  width: 45vw;
+  margin: 0 0 2em 0;
+  /**
+   	* Required properties to achieve text-overflow
+   	*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 /******************************FEATURED********************************/
 .main__featured {
   margin-bottom: 80px; }
@@ -561,6 +571,8 @@ body {
 .swiper-container {
   width: 100%;
   height: 100%; }
+  .swiper-container .featuredAlbums-cardListImage {
+    width: 15vw; }
 
 .swiper-slide {
   text-align: center;
@@ -589,6 +601,9 @@ body {
     -webkit-box-shadow: 0 0 5px 0 #000;
     box-shadow: 0 0 5px 0 #000; }
 
+.featuredAlbums_cardListList {
+  padding-left: 0; }
+
 .featuredAlbums__albumsList {
   margin: 5px 10px;
   height: 70px;
@@ -603,7 +618,8 @@ body {
   .featuredAlbums__albumsList .featureAlbums__albumsListInfo {
     display: flex;
     align-items: center;
-    margin-left: 1vw; }
+    margin-left: 1vw;
+    justify-content: space-between; }
     .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName {
       margin-right: 18vw;
       text-align: center; }

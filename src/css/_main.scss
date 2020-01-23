@@ -1,6 +1,16 @@
 main{
 	width: 100%;
 }
+.overflow {
+    width: 45vw;
+  	margin: 0 0 2em 0;
+  	/**
+   	* Required properties to achieve text-overflow
+   	*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 /******************************FEATURED********************************/
 .main__featured{
@@ -73,6 +83,7 @@ main{
 		}
 	}
 }
+
 html, body {
 	position: relative;
 	height: 100%;
@@ -88,6 +99,10 @@ html, body {
 .swiper-container {
 	width: 100%;
 	height: 100%;
+
+	.featuredAlbums-cardListImage{
+		width: 15vw;
+	}
 	
 }
 	.swiper-slide {
@@ -121,7 +136,9 @@ html, body {
 		}
 	}
 
-
+.featuredAlbums_cardListList{
+	padding-left: 0;
+}
 .featuredAlbums__albumsList{
 	margin: 5px 10px;
 	height: 70px;
@@ -140,6 +157,7 @@ html, body {
 		display: flex;
 		align-items: center;
 		margin-left: 1vw;
+		justify-content: space-between;
 
 		.featuredAlbums__albumsListInfoName{
 			margin-right: 18vw;

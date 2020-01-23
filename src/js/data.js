@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () =>{
 		if (result.error){
 			getToken();
 		}else{
-			console.log(result)
+			//console.log(result)
 			// "https://api.spotify.com/v1/artists/"
-			console.log("Henter Tracks - artist", result.items[0].track.artists[0].name)//Stivejen til artist
+			//console.log("Henter Tracks - artist", result.items[0].track.artists[0].name)//Stivejen til artist
 			//console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
 			result.items.forEach(element => {
 
@@ -165,11 +165,38 @@ document.addEventListener("DOMContentLoaded", () =>{
 	})
 	.then((response) => response.json())
 	.then((result) => {
-		console.log(result)
+		//console.log(result)
 			if (result.error){
 				getToken();
 			}else{
+				result.albums.forEach(element =>{
+					console.log(element)
+					const containerAlbumsImage = document.querySelector(".featuredAlbums-cardListImage");
+					const templateAlbumsImage = document.getElementById("featuredAlbums-imagesTemplate");
+					const cloneAlbumsImage = templateAlbumsImage.content.cloneNode(true);
+	
+					cloneAlbumsImage.querySelector(".featuredAlbums__images").src = element.images[0].url;
+
+					containerAlbumsImage.appendChild(cloneAlbumsImage);
+
+				})
+			}
+			
+			if (result.error){
+				getToken();
+			}else{
+				result.albums.forEach(element => {
+					console.log("Henter Tracks - Album", element.total_tracks)//Stivejen til artist
+					const containerAlbumsList = document.querySelector(".featuredAlbums_cardListList");
+					const templateAlbumsList = document.getElementById("featuredAlbums-listsTemplate");
+					const cloneAlbumsList = templateAlbumsList.content.cloneNode(true);
+			
+					cloneAlbumsList.querySelector(".featuresAlbums__imageAlbumList").src = element.images[0].url;
+					cloneAlbumsList.querySelector(".featuredAlbums__albumsListAlbumName").innerText = element.name;
+					cloneAlbumsList.querySelector(".featuredAlbums__albumListSongNr").innerText = element.total_tracks;
+
+					containerAlbumsList.appendChild(cloneAlbumsList);
+				})
 			}
 	})
-
 });
