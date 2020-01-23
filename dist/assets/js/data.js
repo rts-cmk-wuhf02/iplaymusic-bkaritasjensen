@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log(element)
         //console.log(element.name)
         //Template
-        var container = document.getElementById("dropdown");
-        var template = document.getElementById("categories-template");
-        var clone = template.content.cloneNode(true);
-        clone.querySelector(".categories__title").innerText = element.name; // Tilføjer clone
+        var containerCategories = document.getElementById("dropdown");
+        var templateCategories = document.getElementById("categories-template");
+        var cloneCategories = templateCategories.content.cloneNode(true);
+        cloneCategories.querySelector(".categories__title").innerText = element.name; // Tilføjer clone
 
-        container.appendChild(clone);
+        containerCategories.appendChild(cloneCategories);
       });
     }
   }); //////////////////////////////// FEATURED //////////////////////////////////
@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log(element) 
         //console.log("HENTER BILLEDER", element.images[0].url)
         //Template
-        var container = document.getElementById("featured-cardList");
-        var template = document.getElementById("featured-template");
-        var clone = template.content.cloneNode(true);
+        var containerFeatured = document.getElementById("featured-cardList");
+        var templateFeatured = document.getElementById("featured-template");
+        var cloneFeatured = templateFeatured.content.cloneNode(true);
         clone.querySelector(".featured__images").src = element.images[0].url;
         /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
         // Tilføjer clone
 
-        container.appendChild(clone);
+        containerFeatured.appendChild(cloneFeatured);
       });
     }
   }); //////////////////////////////// PLAYLISTS //////////////////////////////////
@@ -72,27 +72,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (result.error) {
       getToken();
     } else {
-      console.log(result); //console.log(result.playlists) 
-
+      //console.log(result)
+      //console.log(result.playlists) 
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
         //console.log(element)
         // Template
         var containerImage = document.querySelector(".swiper-wrapper");
         var templateImage = document.getElementById("playlists-images");
-        var containerText = document.querySelector(".playlists__headerTitle");
-        var templateText = document.getElementById("playlists-playlistsTitle");
         var cloneImage = templateImage.content.cloneNode(true);
-        var cloneText = templateText.content.cloneNode(true);
-        cloneImage.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")";
-        cloneText.querySelector(".playlists__playlistsText").innerHTML = element.name; // Tilføjer clone
+        cloneImage.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")"; // Tilføjer clone
 
         containerImage.appendChild(cloneImage);
-        containerText.appendChild(cloneText);
       });
     }
-  });
-  var playlistsTracksURL = "https://api.spotify.com/v1/playlists/21THa8j9TaSGuXYNBU5tsC/tracks";
+  }); ///////////////////////////////////// TRACKS API
+
+  var playlistsTracksURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DWVRSukIED0e9/tracks";
   fetch(playlistsTracksURL, {
     method: "GET",
     headers: {
@@ -104,7 +100,30 @@ document.addEventListener("DOMContentLoaded", function () {
     if (result.error) {
       getToken();
     } else {
-      console.log("Henter Tracks", result);
+      console.log(result); // "https://api.spotify.com/v1/artists/"
+
+      console.log("Henter Tracks - artist", result.items[0].track.artists[0].name); //Stivejen til artist
+      //console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
+
+      result.items.forEach(function (element) {
+        var containerPlaylist = document.querySelector(".playlists__playlist");
+        var templatePlaylist = document.getElementById("playlists-playlists");
+        var clonePlaylist = templatePlaylist.content.cloneNode(true);
+        clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
+        containerPlaylist.appendChild(clonePlaylist);
+        /* element.track.forEach(element =>{
+        	
+        	const containerPlaylist = document.querySelector(".playlists__playlist");
+        	const templatePlaylist = document.getElementById("playlists-playlists");
+        	const clonePlaylist = templatePlaylist.content.cloneNode(true);
+        	
+        	clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.name;
+        	
+        	containerPlaylist.appendChild(clonePlaylist); 
+        }) */
+
+        /* }) */
+      });
     }
   });
 });

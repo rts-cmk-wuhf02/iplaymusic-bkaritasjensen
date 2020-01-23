@@ -1,4 +1,13 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {///////////////////////////// VISER TRACKS FRA DET VALGTE PLAYLISTE //////////////////// 
+var imagemin = require("gulp-imagemin");
+
+document.addEventListener("DOMContentLoaded", function () {
+  ///////////////////////////// VISER TRACKS FRA DET VALGTE PLAYLISTE //////////////////// 
+  //Hvis det midste playliste er vist
+  var Image = querySelector(".swiper-slide");
+
+  if (Image === show) {} //Skal den vise playlistens titel
+  //Skal den vise albummets tracks
+
 });
