@@ -10,26 +10,7 @@
 		</div>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/woman-light.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/man-smoke.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/neon-walls.jpg" alt="image album">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a id="featuredAlbums__template" href="/albumDetails">
-						<img class="featuredAlbums__images" src="/assets/images/woman-water.jpg" alt="image album">
-					</a>
-				</div>
+				<!----------------- INDSÆT ALBUM GALLERI ----------------------->
 			</div>
 		</div>
 	</section>
@@ -38,69 +19,37 @@
 			<p class="featuredAlbums__headtext">New Releases</p>
 			<a href="/"><p class="featuredAlbums__headLink">View All</p></a>
 		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/sunglasses-tech.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
-		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/woman-light.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
-		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/man-smoke.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
-		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/woman-water.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
-		</div>
-		<div class="featuredAlbums__albumsList">
-			<div class="featuredAlbums__albumsListFlex">
-				<img class="featuresAlbums__imageAlbumList" src="/assets/images/neon-walls.jpg" alt="image album">
-				<div class="featureAlbums__albumsListInfo">
-					<div class="featuredAlbums__albumsListInfoName">
-						<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
-						<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
-					</div>
-					<p>12 Songs</p>
-				</div>
-			</div>
-		</div>
+		<ul class="featuredAlbums_cardList">
+			<!--------------------- INDSÆT ALBUM LISTE ------------------------->
+		</ul>
 	</section>
 </main>
 
+<!------------------------ TEMPLATE ------------------------------>
+<!-- ALBUM GALLERI -->
+<template id="featuredAlbums-imagesTemplate">
+	<div class="swiper-slide">
+		<a id="featuredAlbums__template" href="/albumDetails">
+			<img class="featuredAlbums__images" src="/assets/images/woman-water.jpg" alt="image album">
+		</a>
+	</div>
+</template>
+
+<!-- ALBUM LISTE -->
+<template id="featuredAlbums-listsTemplate">
+	<div class="featuredAlbums__albumsList">
+		<div class="featuredAlbums__albumsListFlex">
+			<img class="featuresAlbums__imageAlbumList" src="/assets/images/neon-walls.jpg" alt="image album">
+			<div class="featureAlbums__albumsListInfo">
+				<div class="featuredAlbums__albumsListInfoName">
+					<h4 class="featuredAlbums__albumsListAlbumName">Old Town Road</h4>
+					<p class="featuredAlbums__albumsListAlbumArtist">Billy Ray Cyrus</p>
+				</div>
+				<p>12 Songs</p>
+			</div>
+		</div>
+	</div>
+</template>
 
 <script src="/assets/js/swiper.min.js"></script>
 <script>
