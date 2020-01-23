@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 			console.log(result.error)
 		}else{
 			 console.log(result)
-			/* console.log(result.categories.items) 
+			console.log(result.categories.items) 
 			result.categories.items.forEach(element => {
 				//console.log(element)
 				console.log(element.name)
@@ -24,11 +24,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 				const template = document.getElementById("categories-template");
 				const clone = template.content.cloneNode(true);
 				clone.querySelector(".categories__title").innerText = element.name;
-				/*clone.querySelector("").innerText = element.price;
-				clone.querySelector("").href = `/product/?sku=${element.sku}`;  
+				 
 				// Tilføjer clone
 				container.appendChild(clone);
-			}); */
+			});
 		
 		
 		}

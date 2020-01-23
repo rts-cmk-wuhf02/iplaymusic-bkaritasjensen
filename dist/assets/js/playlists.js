@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }).then(function (response) {
     return response.json();
   }).then(function (result) {
-    if (result.error === 401) {
+    if (result.error) {
       getToken();
     } else {
       //console.log(result)
