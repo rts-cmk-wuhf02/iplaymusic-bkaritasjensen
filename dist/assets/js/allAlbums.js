@@ -1,9 +1,9 @@
 "use strict";
 
-document.addEventListener("FDOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   ////////////////////////////// FEATURED ALBUMS /////////////////////////////////
-  var featuredAlbumsURL = "https://api.spotify.com/v1/albums?ids=41MnTivkwTO3UUJ8DrqEJJ%2C6JWc4iAiJ9FjyK0B59ABb4%2C6UXCm6bOO4gFlDQZV5yL37";
-  fetch(featuredAlbumsURL, {
+  var allAlbumsURL = "https://api.spotify.com/v1/browse/new-releases";
+  fetch(allAlbumsURL, {
     method: "GET",
     headers: {
       "Authorization": 'Bearer ' + sessionStorage.token
@@ -11,11 +11,12 @@ document.addEventListener("FDOMContentLoaded", function () {
   }).then(function (response) {
     return response.json();
   }).then(function (result) {
-    //console.log(result)
+    console.log(result.albums.items);
+
     if (result.error) {
       getToken();
     } else {
-      result.albums.forEach(function (element) {
+      result.albums.items.forEach(function (element) {
         var containerAlbumsImage = document.querySelector(".featuredAlbums-cardListImage");
         var templateAlbumsImage = document.getElementById("featuredAlbums-imagesTemplate");
         var cloneAlbumsImage = templateAlbumsImage.content.cloneNode(true);
@@ -27,7 +28,7 @@ document.addEventListener("FDOMContentLoaded", function () {
     if (result.error) {
       getToken();
     } else {
-      result.albums.forEach(function (element) {
+      result.albums.items.forEach(function (element) {
         var containerAlbumsList = document.querySelector(".featuredAlbums_cardListList");
         var templateAlbumsList = document.getElementById("featuredAlbums-listsTemplate");
         var cloneAlbumsList = templateAlbumsList.content.cloneNode(true);

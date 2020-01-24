@@ -621,8 +621,7 @@ body {
     margin-left: 1vw;
     justify-content: space-between; }
     .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName {
-      margin-right: 18vw;
-      text-align: center; }
+      margin-right: 18vw; }
       .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName .featuredAlbums__albumsListAlbumName {
         margin: 0; }
       .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName .featuredAlbums__albumsListAlbumArtist {
