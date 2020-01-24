@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var containerFeatured = document.getElementById("featured-cardList");
         var templateFeatured = document.getElementById("featured-template");
         var cloneFeatured = templateFeatured.content.cloneNode(true);
-        clone.querySelector(".featured__images").src = element.images[0].url;
+        cloneFeatured.querySelector(".featured__images").src = element.images[0].url;
         /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
         // Tilføjer clone
 

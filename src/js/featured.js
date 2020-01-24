@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 				const cloneFeatured = templateFeatured.content.cloneNode(true);
 
-				clone.querySelector(".featured__images").src = element.images[0].url;
+				cloneFeatured.querySelector(".featured__images").src = element.images[0].url;
 				/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
 				
 				// Tilføjer clone
