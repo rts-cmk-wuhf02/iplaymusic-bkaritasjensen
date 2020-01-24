@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
       getToken();
     } else {
       result.albums.items.forEach(function (element) {
-        var random = int(Math.random() * 5);
-        console.log(result.albums.items[random]);
+        /* let random = (int) (Math.random()*5);
+        console.log(result.albums.items[random]) */
         var containerAlbumsImage = document.querySelector(".featuredAlbums-cardListImage");
         var templateAlbumsImage = document.getElementById("featuredAlbums-imagesTemplate");
         var cloneAlbumsImage = templateAlbumsImage.content.cloneNode(true);
