@@ -55,37 +55,38 @@ document.addEventListener("DOMContentLoaded", () =>{
 				//console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
 				result.playlists.items.forEach(element => {
 					//console.log(element)
-					//console.log(element)
 					
-					const containerPlaylist = document.querySelector(".playlists__playlist");
-					const templatePlaylist = document.getElementById("playlists-playlists");
-					const clonePlaylist = templatePlaylist.content.cloneNode(true);
+					
+					const playlistURL = element.tracks.href;
+					
+					fetch(playlistURL, {
+						method: "GET",
+						headers: {
+							"Authorization": 'Bearer ' + sessionStorage.token
+						}
+					})
+					.then((response) => response.json())
+					.then((result) => {
+						if (result.error){
+							getToken();
+						}else{
+							result.items.forEach(element =>{
+								console.log("NUMRE FRA PLAYLISTE", element)
+								const containerPlaylist = document.querySelector(".playlists__playlist");
+								const templatePlaylist = document.getElementById("playlists-playlists");
+								const clonePlaylist = templatePlaylist.content.cloneNode(true);
+								
+								clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
+								clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
+								
+								/* clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
+								clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
 
-					const playlistID = element.tracks.href;
-
-					playlistID.forEach(element =>{
-						console.log(element)
-
-						clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.tracks.href;
-	
-						clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
-						/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+								containerPlaylist.appendChild(clonePlaylist);
+							})
+						}
 					})
 					
-					
-					containerPlaylist.appendChild(clonePlaylist);
-					
-					/* element.track.forEach(element =>{
-						
-						const containerPlaylist = document.querySelector(".playlists__playlist");
-						const templatePlaylist = document.getElementById("playlists-playlists");
-						const clonePlaylist = templatePlaylist.content.cloneNode(true);
-						
-						clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.name;
-						
-						containerPlaylist.appendChild(clonePlaylist); 
-					}) */
-					/* }) */
 				})
 			}
 		})

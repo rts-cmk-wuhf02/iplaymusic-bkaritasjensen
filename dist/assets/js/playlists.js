@@ -47,30 +47,32 @@ document.addEventListener("DOMContentLoaded", function () {
         //console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
         result.playlists.items.forEach(function (element) {
           //console.log(element)
-          //console.log(element)
-          var containerPlaylist = document.querySelector(".playlists__playlist");
-          var templatePlaylist = document.getElementById("playlists-playlists");
-          var clonePlaylist = templatePlaylist.content.cloneNode(true);
-          var playlistID = element.tracks.href;
-          playlistID.forEach(function (element) {
-            console.log(element);
-            clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.tracks.href;
-            clonePlaylist.querySelector(".playlists__playlistsLink").href = "/player/?id=".concat(element.track.id);
-            /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
-          });
-          containerPlaylist.appendChild(clonePlaylist);
-          /* element.track.forEach(element =>{
-          	
-          	const containerPlaylist = document.querySelector(".playlists__playlist");
-          	const templatePlaylist = document.getElementById("playlists-playlists");
-          	const clonePlaylist = templatePlaylist.content.cloneNode(true);
-          	
-          	clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.name;
-          	
-          	containerPlaylist.appendChild(clonePlaylist); 
-          }) */
+          var playlistURL = element.tracks.href;
+          fetch(playlistURL, {
+            method: "GET",
+            headers: {
+              "Authorization": 'Bearer ' + sessionStorage.token
+            }
+          }).then(function (response) {
+            return response.json();
+          }).then(function (result) {
+            if (result.error) {
+              getToken();
+            } else {
+              result.items.forEach(function (element) {
+                console.log("NUMRE FRA PLAYLISTE", element);
+                var containerPlaylist = document.querySelector(".playlists__playlist");
+                var templatePlaylist = document.getElementById("playlists-playlists");
+                var clonePlaylist = templatePlaylist.content.cloneNode(true);
+                clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
+                clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
+                /* clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
+                clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
 
-          /* }) */
+                containerPlaylist.appendChild(clonePlaylist);
+              });
+            }
+          });
         });
       }
     });
