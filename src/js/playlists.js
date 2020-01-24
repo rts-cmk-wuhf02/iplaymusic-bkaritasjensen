@@ -50,13 +50,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 			if (result.error){
 				getToken();
 			}else{
-				// "https://api.spotify.com/v1/artists/"
-				//console.log("Henter Tracks - artist", result.items[0].track.artists[0].name)//Stivejen til artist
-				//console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
 				result.playlists.items.forEach(element => {
-					//console.log(element)
-					
-					
+			
 					const playlistURL = element.tracks.href;
 					
 					fetch(playlistURL, {
@@ -79,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 								clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
 								clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
 								
-								/* clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
-								clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+								clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
+								/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
 
 								containerPlaylist.appendChild(clonePlaylist);
 							})
