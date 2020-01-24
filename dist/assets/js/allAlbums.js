@@ -11,12 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }).then(function (response) {
     return response.json();
   }).then(function (result) {
-    console.log(result.albums.items);
-
+    //console.log(result.albums.items)
     if (result.error) {
       getToken();
     } else {
       result.albums.items.forEach(function (element) {
+        var random = int(Math.random() * 5);
+        console.log(result.albums.items[random]);
         var containerAlbumsImage = document.querySelector(".featuredAlbums-cardListImage");
         var templateAlbumsImage = document.getElementById("featuredAlbums-imagesTemplate");
         var cloneAlbumsImage = templateAlbumsImage.content.cloneNode(true);

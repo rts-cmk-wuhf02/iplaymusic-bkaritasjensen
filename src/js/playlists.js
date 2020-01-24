@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 				const clonePlaylist = templatePlaylist.content.cloneNode(true);
 	
 				clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
+				clonePlaylist.querySelector(".").href=`/`
+				/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
 
 				containerPlaylist.appendChild(clonePlaylist);
 					

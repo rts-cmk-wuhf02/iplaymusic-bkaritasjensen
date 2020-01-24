@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var templatePlaylist = document.getElementById("playlists-playlists");
         var clonePlaylist = templatePlaylist.content.cloneNode(true);
         clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
+        clonePlaylist.querySelector(".").href = "/";
+        /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+
         containerPlaylist.appendChild(clonePlaylist);
         /* element.track.forEach(element =>{
         	

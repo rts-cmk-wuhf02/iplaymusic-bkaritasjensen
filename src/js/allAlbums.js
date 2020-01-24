@@ -12,11 +12,13 @@ document.addEventListener("DOMContentLoaded", () =>{
 	})
 	.then((response) => response.json())
 	.then((result) => {
-		console.log(result.albums.items)
+		//console.log(result.albums.items)
 			if (result.error){
 				getToken();
 			}else{
 				result.albums.items.forEach(element =>{
+					let random = (int) (Math.random()*5);
+					console.log(result.albums.items[random])
 					const containerAlbumsImage = document.querySelector(".featuredAlbums-cardListImage");
 					const templateAlbumsImage = document.getElementById("featuredAlbums-imagesTemplate");
 					const cloneAlbumsImage = templateAlbumsImage.content.cloneNode(true);
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 				getToken();
 			}else{
 				result.albums.items.forEach(element => {
+					
 					const containerAlbumsList = document.querySelector(".featuredAlbums_cardListList");
 					const templateAlbumsList = document.getElementById("featuredAlbums-listsTemplate");
 					const cloneAlbumsList = templateAlbumsList.content.cloneNode(true);
