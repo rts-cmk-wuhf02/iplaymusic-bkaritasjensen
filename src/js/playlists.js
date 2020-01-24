@@ -30,43 +30,50 @@ document.addEventListener("DOMContentLoaded", () =>{
 				
 				cloneImage.querySelector(".swiper-slide").style = "background-image:url("+element.images[0].url+")";
 				
-				
 				// Tilføjer clone
 				containerImage.appendChild(cloneImage);
 				
 			})
 		}
-	});
+		
+		///////////////////////////////////// TRACKS API
+		let playlistsTracksURL = "https://api.spotify.com/v1/browse/featured-playlists";
+		
+		fetch(playlistsTracksURL, {
+			method: "GET",
+			headers: {
+				"Authorization": 'Bearer ' + sessionStorage.token
+			}
+		})
+		.then((response) => response.json())
+		.then((result) => {
+			if (result.error){
+				getToken();
+			}else{
+				// "https://api.spotify.com/v1/artists/"
+				//console.log("Henter Tracks - artist", result.items[0].track.artists[0].name)//Stivejen til artist
+				//console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
+				result.playlists.items.forEach(element => {
+					//console.log(element)
+					//console.log(element)
+					
+					const containerPlaylist = document.querySelector(".playlists__playlist");
+					const templatePlaylist = document.getElementById("playlists-playlists");
+					const clonePlaylist = templatePlaylist.content.cloneNode(true);
 
-	///////////////////////////////////// TRACKS API
-	let playlistsTracksURL = "https://api.spotify.com/v1/playlists/37i9dQZF1DWVRSukIED0e9/tracks";
+					const playlistID = element.tracks.href;
 
-	fetch(playlistsTracksURL, {
-		method: "GET",
-		headers: {
-			"Authorization": 'Bearer ' + sessionStorage.token
-		}
-	})
-	.then((response) => response.json())
-	.then((result) => {
-		if (result.error){
-			getToken();
-		}else{
-			//console.log(result)
-			// "https://api.spotify.com/v1/artists/"
-			//console.log("Henter Tracks - artist", result.items[0].track.artists[0].name)//Stivejen til artist
-			//console.log("Henter Tracks - name", result.items[0].track.name)//Stivejen til sang titel
-			result.items.forEach(element => {
+					playlistID.forEach(element =>{
+						console.log(element)
 
-				const containerPlaylist = document.querySelector(".playlists__playlist");
-				const templatePlaylist = document.getElementById("playlists-playlists");
-				const clonePlaylist = templatePlaylist.content.cloneNode(true);
+						clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.tracks.href;
 	
-				clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
-				clonePlaylist.querySelector(".").href=`/`
-				/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
-
-				containerPlaylist.appendChild(clonePlaylist);
+						clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
+						/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+					})
+					
+					
+					containerPlaylist.appendChild(clonePlaylist);
 					
 					/* element.track.forEach(element =>{
 						
@@ -79,9 +86,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 						containerPlaylist.appendChild(clonePlaylist); 
 					}) */
 					/* }) */
-			})
-		}
-	})
+				})
+			}
+		})
+	});
 
 
 

@@ -763,7 +763,7 @@ body {
 
 /*****************************PLAYER**************************************/
 .player__mainBackground {
-  background-image: url("/assets/images/neon-walls.jpg");
+  background-image: url("/assets/images/badges.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -774,7 +774,7 @@ body {
     height: 175px;
     border-radius: 50%;
     align-items: center;
-    border: 20px solid rgba(60, 107, 134, 0.8);
+    border: 20px solid rgba(134, 60, 94, 0.8);
     display: block;
     margin: 40px auto 0 auto;
     position: relative; }
@@ -788,20 +788,20 @@ body {
       margin-bottom: 30px; }
   .player__mainBackground .player__playerLine {
     position: relative;
-    border: 1px solid white;
+    border: 1px solid #341931;
     border-radius: 2px;
     width: 85vw;
     margin: 0 auto; }
     .player__mainBackground .player__playerLine .player__playerCircleBorder {
       position: absolute;
-      border: 5px solid rgba(255, 15, 104, 0.3);
+      border: 5px solid rgba(134, 60, 94, 0.8);
       border-radius: 50%;
       top: -11px; }
       .player__mainBackground .player__playerLine .player__playerCircleBorder .player__playerCircle {
         margin: 0;
-        border: 5px solid #ff0f68;
+        border: 5px solid #863c5e;
         border-radius: 50%;
-        top: -19.7px; }
+        top: -19.4px; }
   .player__mainBackground .player__SongTime {
     display: flex;
     justify-content: space-between;
@@ -812,13 +812,11 @@ body {
       font-weight: 200; }
   .player__mainBackground .player__playerIcons {
     width: 70vw;
+    color: #341931;
     display: block;
     margin: 0 auto; }
     .player__mainBackground .player__playerIcons .fa-play {
       font-size: 3em;
-      background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       margin: 0 2.5vw; }
     .player__mainBackground .player__playerIcons .fa-angle-double-left, .player__mainBackground .player__playerIcons .fa-angle-left, .player__mainBackground .player__playerIcons .fa-angle-double-right, .player__mainBackground .player__playerIcons .fa-angle-right {
       font-size: 2em;
