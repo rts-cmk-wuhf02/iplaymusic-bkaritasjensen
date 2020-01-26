@@ -15,19 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
       getToken();
     } else {
       //console.log(result)
-      //console.log(result.playlists) 
       result.playlists.items.forEach(function (element) {
         //console.log(element) 
-        //console.log(element)
-        // Template
         var containerImage = document.querySelector(".swiper-wrapper");
         var templateImage = document.getElementById("playlists-images");
         var cloneImage = templateImage.content.cloneNode(true);
-        cloneImage.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")"; // Tilføjer clone
-
+        cloneImage.querySelector(".swiper-slide").style = "background-image:url(" + element.images[0].url + ")";
         containerImage.appendChild(cloneImage);
       });
-    } ///////////////////////////////////// TRACKS API
+    } ///////////////////////////////////// TRACKS API ////////////////////////////////////////
 
 
     var playlistsTracksURL = "https://api.spotify.com/v1/browse/featured-playlists";
@@ -52,20 +48,27 @@ document.addEventListener("DOMContentLoaded", function () {
           }).then(function (response) {
             return response.json();
           }).then(function (result) {
+            //console.log(result)
             if (result.error) {
               getToken();
             } else {
               result.items.forEach(function (element) {
-                console.log("NUMRE FRA PLAYLISTE", element);
+                //console.log("NUMRE FRA PLAYLISTE", element)
                 var containerPlaylist = document.querySelector(".playlists__playlist");
                 var templatePlaylist = document.getElementById("playlists-playlists");
                 var clonePlaylist = templatePlaylist.content.cloneNode(true);
                 clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
                 clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
-                clonePlaylist.querySelector(".playlists__playlistsLink").href = "/player/?id=".concat(element.track.id);
-                /*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+                var choosenTrackURL = clonePlaylist.querySelector(".playlists__playlistsLink").href = "/player/?id=".concat(element.track.id);
+                /* module.export = { choosenTrackURL }; */
 
                 containerPlaylist.appendChild(clonePlaylist);
+              });
+              result.items.track.id.forEach(function (element) {
+                console.log(element);
+                /* document.querySelector(".player__songInfoArtistName").innerText = result.items[0].track.name;
+                document.querySelector(".player_songInfoArtist").innerText = element.track.artists[0].name;
+                document.querySelector(".").src = element.track.album.images[0]; */
               });
             }
           });

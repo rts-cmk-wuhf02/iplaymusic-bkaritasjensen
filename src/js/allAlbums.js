@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 					cloneAlbumsList.querySelector(".featuredAlbums__albumListSongNr").innerText = element.total_tracks;
 
 					containerAlbumsList.appendChild(cloneAlbumsList);
+
 				})
 			}
 	})
