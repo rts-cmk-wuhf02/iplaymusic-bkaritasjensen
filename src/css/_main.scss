@@ -25,7 +25,6 @@ main{
 		margin-left: 5vw;
 	}
 	.featured__textInfo{
-		color: white;
 		position: absolute;
 		z-index: 10;
 		width: 85vw;
@@ -61,7 +60,7 @@ main{
 }
 
 
-/*****************************ALL ALBUMS**************************************/
+/***************************** ALL ALBUMS **************************************/
 
 .featuredAlbums__headerText{
 	display: flex;
@@ -73,14 +72,9 @@ main{
 		font-weight: bolder;
 		letter-spacing: unset;
 		text-transform: unset;
-		color: $secound-color;
 	}
 	a{
 		text-decoration: none;
-
-		.featuredAlbums__headLink{
-			color: $base-color;
-		}
 	}
 }
 
@@ -89,10 +83,8 @@ html, body {
 	height: 100%;
   }
   body {
-	background: #eee;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	color:#000;
 	margin: 0;
 	padding: 0;
   }
@@ -108,7 +100,6 @@ html, body {
 	.swiper-slide {
 		text-align: center;
 		font-size: 18px;
-		background: #fff;
 		margin: 5px 15vw;
 		
 		/* Center slide text vertically */
@@ -142,7 +133,6 @@ html, body {
 .featuredAlbums__albumsList{
 	margin: 5px 10px;
 	height: 70px;
-	color: $third-color;
 
 	.featuredAlbums__albumsListFlex{
 		display: flex;
@@ -172,7 +162,7 @@ html, body {
 	}
 }
 
-/*****************************ALBUMS DETALJER**************************************/
+/***************************** ALBUMS DETALJER **************************************/
 
 .albumsDetails__imageSection{
 	background-image: url("/assets/images/man-smoke.jpg");
@@ -180,11 +170,7 @@ html, body {
 	background-repeat: no-repeat;
 	height: 350px;
 	background-size: cover;
-	color: white;
 
-	li .fas{
-		color: white;
-	}
 	.albumDetails__headerText{
 		margin: 0 0 0 10vw;
 		
@@ -194,14 +180,9 @@ html, body {
 		.albumDetails__headerTextSongs{
 			margin-bottom: 120px;
 		}
-		.albumDetails__headerHeadHastags{
-			color: $secound-color;
-		}
 		.albumDetails__headerHastags{
-			background-color: $base-color;
 			border-radius: 25px;
 			border: none;
-			color: white;
 			margin-right: 5px;
 			height: 25px;
 			font-weight: bolder;
@@ -238,15 +219,12 @@ html, body {
 			.albumDetails__albumsListAlbumName{
 				margin: 0 0 2px 3vw;
 				font-size: 0.9em;
-				color: $third-color;
 			}
 			.albumDetails__albumsListAlbumArtist{
 				margin: 0 0 0 3vw;
 				font-size: 0.8em;
-				color: $secound-color;
 			}
 			.albumDetails__mainSongTime{
-				color: $secound-color;
 				margin-right: 3vw;
 				font-size: 0.8em;
 			}
@@ -255,7 +233,7 @@ html, body {
 }
 
 
-/*****************************CATEGORIES**************************************/
+/***************************** CATEGORIES **************************************/
 
 .main__categories{
 	margin-bottom: 80px;
@@ -268,13 +246,12 @@ html, body {
 	font-size: 16px;  
 	border: none;
 	outline: none;
-	color: white;
 	height: 54px;
 	width: 85vw;
 	border-radius: 10px;
 	display: flex;
 	justify-content: space-between;
-	background-color: $base-color;
+	background-color: $view-color;
 	padding: 0 5vw;
 	font-size: bolder;
   }
@@ -285,7 +262,6 @@ html, body {
 	  }
   }
   .dropdown-content a {
-	color: $secound-color;
 	margin: 20px 10px 10px 40px;
 	text-decoration: none;
 	display: block;
@@ -299,7 +275,7 @@ html, body {
 
 
 
-/*****************************PLAYLISTS**************************************/
+/***************************** PLAYLISTS **************************************/
 .main__playlists{
 	margin-bottom: 80px;
 }
@@ -309,7 +285,6 @@ html, body {
 	background-repeat: no-repeat;
 	height: 272px;
 	background-size: cover;
-	color: white;
 
 	.playslists__headerText{
 		font-size: 2em;
@@ -318,7 +293,6 @@ html, body {
 	.playlists__headerTitle{
 		
 		.playlists__playlistsText{
-			color: $third-color;
 			text-align: center;
 			margin: 0;
 			font-size: 1.5em;
@@ -354,7 +328,6 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
-	color: #fff;
 
 	.player__artistProfilePhotoBorder{	
 		.player__artistProfilePhoto{
@@ -383,7 +356,7 @@ html, body {
 	}
 	.player__playerLine{
 		position: relative;
-		border: 1px solid $secound-color;
+		border: 1px solid;
 		border-radius: 2px;
 		width: 85vw;
 		margin: 0 auto;
@@ -415,7 +388,6 @@ html, body {
 	}
 	.player__playerIcons{
 		width: 70vw;
-		color: $secound-color;
 		display: block;
 		margin: 0 auto;
 		.fa-play{

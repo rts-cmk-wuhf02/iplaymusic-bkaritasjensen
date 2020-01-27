@@ -480,8 +480,7 @@ nav {
   font-weight: 100; }
 
 .fa-search, .fa-chevron-left {
-  margin-top: 17px;
-  color: #111625; }
+  margin-top: 17px; }
 
 .fa-chevron-left {
   margin-left: 5vw; }
@@ -512,7 +511,6 @@ main {
     font-size: 2em;
     margin-left: 5vw; }
   .main__featured .featured__textInfo {
-    color: white;
     position: absolute;
     z-index: 10;
     width: 85vw;
@@ -540,7 +538,7 @@ main {
     -webkit-box-shadow: 0 0 5px 0 #000;
     box-shadow: 0 0 5px 0 #000; }
 
-/*****************************ALL ALBUMS**************************************/
+/***************************** ALL ALBUMS **************************************/
 .featuredAlbums__headerText {
   display: flex;
   justify-content: space-between;
@@ -549,22 +547,17 @@ main {
   .featuredAlbums__headerText .featuredAlbums__headtext {
     font-weight: bolder;
     letter-spacing: unset;
-    text-transform: unset;
-    color: #341931; }
+    text-transform: unset; }
   .featuredAlbums__headerText a {
     text-decoration: none; }
-    .featuredAlbums__headerText a .featuredAlbums__headLink {
-      color: #FF1168; }
 
 html, body {
   position: relative;
   height: 100%; }
 
 body {
-  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #000;
   margin: 0;
   padding: 0; }
 
@@ -577,7 +570,6 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   margin: 5px 15vw;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -606,8 +598,7 @@ body {
 
 .featuredAlbums__albumsList {
   margin: 5px 10px;
-  height: 70px;
-  color: #111625; }
+  height: 70px; }
   .featuredAlbums__albumsList .featuredAlbums__albumsListFlex {
     display: flex; }
   .featuredAlbums__albumsList .featuresAlbums__imageAlbumList {
@@ -627,29 +618,22 @@ body {
       .featuredAlbums__albumsList .featureAlbums__albumsListInfo .featuredAlbums__albumsListInfoName .featuredAlbums__albumsListAlbumArtist {
         margin: 0; }
 
-/*****************************ALBUMS DETALJER**************************************/
+/***************************** ALBUMS DETALJER **************************************/
 .albumsDetails__imageSection {
   background-image: url("/assets/images/man-smoke.jpg");
   background-position: center;
   background-repeat: no-repeat;
   height: 350px;
-  background-size: cover;
-  color: white; }
-  .albumsDetails__imageSection li .fas {
-    color: white; }
+  background-size: cover; }
   .albumsDetails__imageSection .albumDetails__headerText {
     margin: 0 0 0 10vw; }
     .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHeadText {
       font-size: 2.3em; }
     .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerTextSongs {
       margin-bottom: 120px; }
-    .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHeadHastags {
-      color: #341931; }
     .albumsDetails__imageSection .albumDetails__headerText .albumDetails__headerHastags {
-      background-color: #FF1168;
       border-radius: 25px;
       border: none;
-      color: white;
       margin-right: 5px;
       height: 25px;
       font-weight: bolder; }
@@ -676,18 +660,15 @@ body {
       width: 100%; }
       .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__albumsListAlbumName {
         margin: 0 0 2px 3vw;
-        font-size: 0.9em;
-        color: #111625; }
+        font-size: 0.9em; }
       .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__albumsListAlbumArtist {
         margin: 0 0 0 3vw;
-        font-size: 0.8em;
-        color: #341931; }
+        font-size: 0.8em; }
       .albumDetails__mainSectionSongs .albumDetails__mainSong .albumDetails__mainSongText .albumDetails__mainSongTime {
-        color: #341931;
         margin-right: 3vw;
         font-size: 0.8em; }
 
-/*****************************CATEGORIES**************************************/
+/***************************** CATEGORIES **************************************/
 .main__categories {
   margin-bottom: 80px; }
   .main__categories .featured__headText {
@@ -698,7 +679,6 @@ body {
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
   height: 54px;
   width: 85vw;
   border-radius: 10px;
@@ -714,7 +694,6 @@ body {
     margin: 15px auto; }
 
 .dropdown-content a {
-  color: #341931;
   margin: 20px 10px 10px 40px;
   text-decoration: none;
   display: block;
@@ -725,7 +704,7 @@ body {
 .show {
   display: block; }
 
-/*****************************PLAYLISTS**************************************/
+/***************************** PLAYLISTS **************************************/
 .main__playlists {
   margin-bottom: 80px; }
 
@@ -734,13 +713,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 272px;
-  background-size: cover;
-  color: white; }
+  background-size: cover; }
   .playlists__headerSection .playslists__headerText {
     font-size: 2em;
     margin-left: 10vw; }
   .playlists__headerSection .playlists__headerTitle .playlists__playlistsText {
-    color: #111625;
     text-align: center;
     margin: 0;
     font-size: 1.5em; }
@@ -767,8 +744,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  color: #fff; }
+  height: 100%; }
   .player__mainBackground .player__artistProfilePhotoBorder .player__artistProfilePhoto {
     width: 175px;
     height: 175px;
@@ -788,7 +764,7 @@ body {
       margin-bottom: 30px; }
   .player__mainBackground .player__playerLine {
     position: relative;
-    border: 1px solid #341931;
+    border: 1px solid;
     border-radius: 2px;
     width: 85vw;
     margin: 0 auto; }
@@ -812,7 +788,6 @@ body {
       font-weight: 200; }
   .player__mainBackground .player__playerIcons {
     width: 70vw;
-    color: #341931;
     display: block;
     margin: 0 auto; }
     .player__mainBackground .player__playerIcons .fa-play {
@@ -823,24 +798,66 @@ body {
       margin: 0 2.5vw;
       padding-bottom: 50px; }
 
-.footer__icons {
-  background-color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 55px;
-  text-align: center;
-  inline-size: -webkit-fill-available;
-  letter-spacing: 1.1em;
-  box-shadow: 5px; }
-  .footer__icons i {
-    display: inline-block;
-    padding-top: 3%;
+.footer__icons i {
+  display: inline-block;
+  padding-top: 3%;
+  background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle; }
+
+.footer__icons .fa-record-vinyl {
+  font-size: 2.3em; }
+
+.footer__icons a i .fa-stream {
+  letter-spacing: unset; }
+
+html {
+  background-color: white; }
+  html h1 {
+    color: white; }
+  html a {
+    color: #111625; }
+  html .featuredAlbums__headLink {
+    color: #FF1168; }
+  html .main__categories .featured__headText {
     background: -webkit-linear-gradient(left, #EE0979, #FF6A00);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    vertical-align: middle; }
-  .footer__icons .fa-record-vinyl {
-    font-size: 2.3em; }
-  .footer__icons a i .fa-stream {
-    letter-spacing: unset; }
+    -webkit-text-fill-color: transparent; }
+  html .main__categories #dropdown p {
+    color: white; }
+  html .main__categories #dropdown .fas {
+    background: -webkit-linear-gradient(left, #EE0979, #FF6A00); }
+  html .footer__icons {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    inline-size: -webkit-fill-available;
+    letter-spacing: 1.1em;
+    box-shadow: 5px; }
+
+html[data-theme='dark'] {
+  background-color: #341931; }
+  html[data-theme='dark'] p {
+    color: white; }
+  html[data-theme='dark'] i {
+    color: white; }
+  html[data-theme='dark'] h4 {
+    color: white; }
+  html[data-theme='dark'] h3 {
+    color: white; }
+  html[data-theme='dark'] .featuredAlbums__headLink {
+    color: #FF1168; }
+  html[data-theme='dark'] .footer__icons {
+    background-color: #111625;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    inline-size: -webkit-fill-available;
+    letter-spacing: 1.1em;
+    box-shadow: 5px; }
