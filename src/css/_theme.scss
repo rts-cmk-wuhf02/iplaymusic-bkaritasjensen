@@ -76,4 +76,8 @@ html[data-theme='dark']{
 		letter-spacing: 1.1em;
 		box-shadow: 5px;
 	}
+	.dark-theme-activate {
+		-webkit-text-fill-color: var(--activate-link-color) !important;
+	}
 }
+

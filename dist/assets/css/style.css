@@ -861,3 +861,5 @@ html[data-theme='dark'] {
     inline-size: -webkit-fill-available;
     letter-spacing: 1.1em;
     box-shadow: 5px; }
+  html[data-theme='dark'] .dark-theme-activate {
+    -webkit-text-fill-color: var(--activate-link-color) !important; }
