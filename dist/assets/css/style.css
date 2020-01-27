@@ -501,7 +501,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-/******************************FEATURED********************************/
+/****************************** FEATURED ********************************/
 .main__featured {
   margin-bottom: 80px; }
   .main__featured .featured__headText {
@@ -738,7 +738,7 @@ body {
 .playlists__playlist {
   margin-top: 80px; }
 
-/*****************************PLAYER**************************************/
+/***************************** PLAYER **************************************/
 .player__mainBackground {
   background-image: url("/assets/images/badges.png");
   background-position: center;
@@ -863,3 +863,5 @@ html[data-theme='dark'] {
     box-shadow: 5px; }
   html[data-theme='dark'] .dark-theme-activate {
     -webkit-text-fill-color: var(--activate-link-color) !important; }
+  html[data-theme='dark'] .player__playerLine {
+    border: 1px solid white; }

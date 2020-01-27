@@ -79,5 +79,10 @@ html[data-theme='dark']{
 	.dark-theme-activate {
 		-webkit-text-fill-color: var(--activate-link-color) !important;
 	}
+
+	// PLAYER
+	.player__playerLine{
+		border: 1px solid $base-color;
+	}
 }
 
