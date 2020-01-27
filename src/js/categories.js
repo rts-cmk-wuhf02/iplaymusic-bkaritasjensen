@@ -13,12 +13,11 @@ document.addEventListener("DOMContentLoaded", () =>{
 	.then((result) => {
 		if (result.error){
 			getToken();
-			//console.log(result.error)
 		}else{
 			//console.log(result)
 			//console.log(result.categories.items) 
 			result.categories.items.forEach(element => {
-				//console.log(element)
+				console.log(element)
 				//console.log(element.name)
 				//Template
 				const containerCategories = document.getElementById("dropdown");
@@ -35,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 		}
 	});
 
-
+	/* // prøver finde underkategorierne 
+	var subcategories = `https://api.spotify.com/v1/browse/categories/wellness/playlists`;
+	console.log(subcategories) */
 
 });
