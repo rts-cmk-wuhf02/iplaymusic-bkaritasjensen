@@ -84,5 +84,24 @@ html[data-theme='dark']{
 	.player__playerLine{
 		border: 1px solid $base-color;
 	}
+
+	// CATEGORIES
+	.main__categories{
+		.dropdown .dropbtn{
+			background-color: $view-color;
+	
+			.fa-chevron-right{
+				background: unset;
+			}
+		}
+		#dropdown{
+			.dropdown-content a{
+				color: $base-color;
+			}
+			.fas{
+				background: unset;
+			}
+		}
+	}
 }
 

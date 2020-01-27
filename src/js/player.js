@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", () =>{
-	
 	////////////////////////////////// PLAYER //////////////////////////////
 	
 	/* var { choosenTrackURL } = require ('/assets/js/playlists.js');  */
