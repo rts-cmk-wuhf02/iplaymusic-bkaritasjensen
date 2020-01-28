@@ -22,11 +22,24 @@ html{
 		}
 		#dropdown{
 			p{
+				color: $third-color;
+			}
+			.categories__title{
 				color: $base-color;
 			}
-			.fas{
-				background: $gradient-color;
+			.dropdown-content a{
+				color: $third-color;
 			}
+			.fas{
+				background: unset;
+			}
+		}
+		.dropdown .dropbtn{
+			background-color: $view-color;
+			.fa-chevron-right{
+				background: unset;
+			}
+
 		}
 	}
 	// FOOTER

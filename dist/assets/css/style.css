@@ -831,9 +831,17 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   html .main__categories #dropdown p {
+    color: #111625; }
+  html .main__categories #dropdown .categories__title {
     color: white; }
+  html .main__categories #dropdown .dropdown-content a {
+    color: #111625; }
   html .main__categories #dropdown .fas {
-    background: -webkit-linear-gradient(left, #EE0979, #FF6A00); }
+    background: unset; }
+  html .main__categories .dropdown .dropbtn {
+    background-color: #FF1168; }
+    html .main__categories .dropdown .dropbtn .fa-chevron-right {
+      background: unset; }
   html .footer__icons {
     background-color: white;
     position: fixed;
