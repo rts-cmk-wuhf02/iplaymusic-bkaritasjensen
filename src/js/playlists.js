@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", () =>{
 								clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
 								
 								var choosenTrackURL = clonePlaylist.querySelector(".playlists__playlistsLink").href=`/player/?id=${element.track.id}`;
-								module.export = { choosenTrackURL };
+								/* module.export = { choosenTrackURL }; */
 								
 								containerPlaylist.appendChild(clonePlaylist);
 							})
 							result.items.track.id.forEach(element => {
-								console.log(element)
+								//console.log(element)
 
 
 								/* document.querySelector(".player__songInfoArtistName").innerText = result.items[0].track.name;

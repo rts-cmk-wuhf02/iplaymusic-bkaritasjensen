@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
 	////////////////////////////////// PLAYER //////////////////////////////
 	
-	var { choosenTrackURL } = require ('/assets/js/playlists.js'); 
+	/* var { choosenTrackURL } = require ('/assets/js/playlists.js'); 
 	fetch(choosenTrackURL, {
 		method: "GET",
 		headers: {
@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", () =>{
 			document.querySelector(".").src = element.track.album.images[0]; */
 		}
 
-	})
+	}) */
 	
 });

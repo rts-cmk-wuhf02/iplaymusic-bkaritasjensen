@@ -27,13 +27,17 @@
 		<div class="player__playerIcons">
 			<i class="fas fa-angle-left"></i>
 			<i class="fas fa-angle-double-left"></i>
-			<i class="fas fa-play"></i>
+			<i onclick="document.getElementById('player').play()" class="fas fa-play"></i>
 			<i class="fas fa-angle-double-right"></i>
 			<i class="fas fa-angle-right"></i>
 			</div>
 	</section>
+	<audio id="player" src="/assets/images/5050-wholesome-by-kevin-macleod.mp3"></audio>
+	<div>
+		<button onclick="document.getElementById('player').pause()">Pause</button>
+	</div> 
 </main>
 </div>
 
-<script src="/assets/js/player.js"></script>
+<!-- <script src="/assets/js/player.js"></script> -->
 <% include ../partials/after-footer %>
