@@ -2,8 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   ////////////////////////////////// PLAYER //////////////////////////////
+  var _require = require('/assets/js/playlists.js'),
+      choosenTrackURL = _require.choosenTrackURL;
 
-  /* var { choosenTrackURL } = require ('/assets/js/playlists.js');  */
   fetch(choosenTrackURL, {
     method: "GET",
     headers: {

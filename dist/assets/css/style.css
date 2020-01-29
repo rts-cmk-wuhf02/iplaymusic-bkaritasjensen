@@ -674,7 +674,7 @@ body {
   .main__categories .featured__headText {
     margin-left: 8vw; }
 
-.dropdown .dropbtn {
+#dropdown .dropbtn {
   cursor: pointer;
   font-size: 16px;
   border: none;
@@ -682,25 +682,18 @@ body {
   height: 54px;
   width: 85vw;
   border-radius: 10px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 0 5vw;
   font-size: bolder; }
 
-.dropdown {
-  margin: 10px 0; }
-
 #dropdown {
   padding: 0; }
-  #dropdown .fas {
-    margin-left: 40vw; }
-
-.dropdown-content {
-  display: none; }
+  #dropdown .categories__button {
+    margin: 15px auto; }
 
 .dropdown-content a {
-  margin: 10px 10px 10px 40px;
+  margin: 20px 10px 10px 40px;
   text-decoration: none;
   display: block;
   width: 75vw;

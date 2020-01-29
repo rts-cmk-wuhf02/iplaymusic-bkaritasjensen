@@ -241,7 +241,7 @@ html, body {
 		margin-left: 8vw;
 	}
 }
-.dropdown .dropbtn {
+  #dropdown .dropbtn {
 	cursor: pointer;
 	font-size: 16px;  
 	border: none;
@@ -249,28 +249,19 @@ html, body {
 	height: 54px;
 	width: 85vw;
 	border-radius: 10px;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 5vw;
 	font-size: bolder;
   }
-  .dropdown{
-	  margin: 10px 0;
-  }
   #dropdown{
 	  padding: 0;
-	  .fas{
-		  margin-left: 40vw;
+	  .categories__button{
+		  margin: 15px auto;
 	  }
   }
-  
-  .dropdown-content {
-	display: none;
-  }
-  
   .dropdown-content a {
-	margin: 10px 10px 10px 40px;
+	margin: 20px 10px 10px 40px;
 	text-decoration: none;
 	display: block;
 	width: 75vw;
@@ -280,9 +271,8 @@ html, body {
   .show {
 	display: block;
   }
-
-
-
+  
+ 
 /***************************** PLAYLISTS **************************************/
 .main__playlists{
 	margin-bottom: 80px;
