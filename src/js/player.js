@@ -18,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 			console.log(result)
 			/* document.querySelector(".player__songInfoArtistName").innerText = result.items[0].track.name;
 			document.querySelector(".player_songInfoArtist").innerText = element.track.artists[0].name;
-			document.querySelector(".").src = element.track.album.images[0]; */
+			document.querySelector(".").src = element.track.album.images[0]; 
 		}
 
-	}) */
-	
+	}) */	
 });

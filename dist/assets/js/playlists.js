@@ -59,14 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 var clonePlaylist = templatePlaylist.content.cloneNode(true);
                 clonePlaylist.querySelector(".albumDetails__albumsListAlbumName").innerText = element.track.name;
                 clonePlaylist.querySelector(".albumDetails__albumsListAlbumArtist").innerText = element.track.artists[0].name;
-                var choosenTrackURL = clonePlaylist.querySelector(".playlists__playlistsLink").href = "/player/?id=".concat(element.track.id);
-                module["export"] = {
-                  choosenTrackURL: choosenTrackURL
-                };
+                clonePlaylist.querySelector(".playlists__playlistsLink").href = "/player/?id=".concat(element.track.id);
+                /* module.export = { choosenTrackURL }; */
+
                 containerPlaylist.appendChild(clonePlaylist);
               });
-              result.items.track.id.forEach(function (element) {
-                console.log(element);
+              result.items.track.id.forEach(function (element) {//console.log(element)
+
                 /* document.querySelector(".player__songInfoArtistName").innerText = result.items[0].track.name;
                 document.querySelector(".player_songInfoArtist").innerText = element.track.artists[0].name;
                 document.querySelector(".").src = element.track.album.images[0]; */
