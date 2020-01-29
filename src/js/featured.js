@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 			//console.log(result)
 			//console.log(result.playlists.items) 
 			result.playlists.items.forEach(element => {
-				//console.log(element) 
+				console.log(element) 
 				//console.log("HENTER BILLEDER", element.images[0].url)
 				
 				//Template
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 				const cloneFeatured = templateFeatured.content.cloneNode(true);
 
 				cloneFeatured.querySelector(".featured__images").src = element.images[0].url;
-				/*clone.querySelector("").href = `/product/?sku=${element.sku}`;  */
+				cloneFeatured.querySelector(".featured__imagesLink").href = `/playlists/${element.href}`;  
 				
 				// Tilføjer clone
 				containerFeatured.appendChild(cloneFeatured);

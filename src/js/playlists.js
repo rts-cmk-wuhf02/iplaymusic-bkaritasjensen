@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 							getToken();
 						}else{
 							result.items.forEach(element =>{
-								//console.log("NUMRE FRA PLAYLISTE", element)
+								console.log("NUMRE FRA PLAYLISTE", element)
 								const containerPlaylist = document.querySelector(".playlists__playlist");
 								const templatePlaylist = document.getElementById("playlists-playlists");
 								const clonePlaylist = templatePlaylist.content.cloneNode(true);

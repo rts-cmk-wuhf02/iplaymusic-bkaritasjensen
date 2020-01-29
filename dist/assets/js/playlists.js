@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
               getToken();
             } else {
               result.items.forEach(function (element) {
-                //console.log("NUMRE FRA PLAYLISTE", element)
+                console.log("NUMRE FRA PLAYLISTE", element);
                 var containerPlaylist = document.querySelector(".playlists__playlist");
                 var templatePlaylist = document.getElementById("playlists-playlists");
                 var clonePlaylist = templatePlaylist.content.cloneNode(true);
