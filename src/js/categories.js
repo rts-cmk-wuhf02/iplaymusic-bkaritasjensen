@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 	//////////////////////////////// CATEGORI //////////////////////////////////
 	let categoriesURL = "https://api.spotify.com/v1/browse/categories";
+	let categoriesColors = ["#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793"]
 
 	fetch(categoriesURL, {
 		method: "GET",
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 		}else{
 			//console.log(result)
 			//console.log(result.categories.items) 
-			result.categories.items.forEach(element => {
+			result.categories.items.forEach((element, index) => {
 				console.log(element)
 				//console.log(element.name)
 				//Template
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 				const cloneCategories = templateCategories.content.cloneNode(true);
 
 				cloneCategories.querySelector(".categories__title").innerText = element.name;
+				cloneCategories.querySelector(".dropdown .dropbtn").style.background = categoriesColors[index]
 				 
 				// Tilføjer clone
 				containerCategories.appendChild(cloneCategories);

@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   //////////////////////////////// CATEGORI //////////////////////////////////
   var categoriesURL = "https://api.spotify.com/v1/browse/categories";
+  var categoriesColors = ["#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793", "#FF1168", "#E54028", "#F18D05", "#F2BC06", "#5EB11C", "#3A7634", "#0ABEBE", "#00A1CB", "#115793"];
   fetch(categoriesURL, {
     method: "GET",
     headers: {
@@ -16,14 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       //console.log(result)
       //console.log(result.categories.items) 
-      result.categories.items.forEach(function (element) {
+      result.categories.items.forEach(function (element, index) {
         console.log(element); //console.log(element.name)
         //Template
 
         var containerCategories = document.getElementById("dropdown");
         var templateCategories = document.getElementById("categories-template");
         var cloneCategories = templateCategories.content.cloneNode(true);
-        cloneCategories.querySelector(".categories__title").innerText = element.name; // Tilføjer clone
+        cloneCategories.querySelector(".categories__title").innerText = element.name;
+        cloneCategories.querySelector(".dropdown .dropbtn").style.background = categoriesColors[index]; // Tilføjer clone
 
         containerCategories.appendChild(cloneCategories);
       });
